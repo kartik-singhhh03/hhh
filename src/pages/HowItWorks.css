@@ -1,0 +1,33 @@
+/* Vertical timeline for mobile */
+@media (max-width: 900px) {
+  .timeline-desktop { display: none; }
+  .timeline-mobile  { display: flex !important; }
+}
+.timeline-mobile { display: none; flex-direction: column; gap: 0; }
+.tm-step {
+  display: flex;
+  gap: 24px;
+  padding-bottom: 40px;
+  position: relative;
+}
+.tm-step::before {
+  content: '';
+  position: absolute;
+  left: 27px; top: 64px; bottom: 0;
+  width: 1px;
+  background: linear-gradient(180deg, var(--primary), transparent);
+}
+.tm-step:last-child::before { display: none; }
+.tm-num-wrap { flex-shrink: 0; }
+.tm-num {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--primary); color: var(--luxury-dark);
+  font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+}
+.tm-content { padding-top: 12px; }
+.tm-content h3 {
+  font-family: var(--font-ui); font-size: 1rem; font-weight: 700;
+  color: var(--white); margin-bottom: 6px;
+}
+.tm-content p { font-size: .85rem; color: var(--text-muted); line-height: 1.8; }
