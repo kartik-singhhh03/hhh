@@ -122,10 +122,10 @@ export default function About() {
                 <span className="label">Founded</span>
               </div>
               <div className="story-img-main">
-                <img src="/image-12.webp" alt="Bright Pacific apartment living room managed by Holiday Home Host" loading="lazy" />
+                <img src="/image-12.webp" alt="Bright Bay Residences apartment living room managed by Holiday Home Host" loading="lazy" />
               </div>
               <div className="story-img-float">
-                <img src="/image-5.webp" alt="Pacific apartment balcony with sea view" loading="lazy" />
+                <img src="/image-5.webp" alt="Bay Residences balcony with sea view" loading="lazy" />
               </div>
             </div>
             <div className="story-content reveal reveal-delay-2">
@@ -293,7 +293,7 @@ export default function About() {
             </div>
             <div className="team-card reveal reveal-delay-2">
               <div className="team-card-photo">
-                <img src="/image-17.webp" alt="Guest-ready Pacific apartment dining and kitchen area" loading="lazy" />
+                <img src="/image-17.webp" alt="Guest-ready Bay Residences dining and kitchen area" loading="lazy" />
                 <div className="team-card-photo-overlay"></div>
                 <div className="team-social-links">
                   <a href="#" className="team-social-link" aria-label="LinkedIn">
@@ -363,7 +363,7 @@ export default function About() {
           </div>
           <div className="values-wrap">
             <div className="values-image reveal">
-              <img src="/image-5.webp" alt="Pacific apartment balcony overlooking the coast" loading="lazy" />
+              <img src="/image-5.webp" alt="Bay Residences balcony overlooking the coast" loading="lazy" />
               <div className="values-image-tag">
                 <div className="values-image-tag-icon">
                   <span className="material-symbols-outlined">location_on</span>

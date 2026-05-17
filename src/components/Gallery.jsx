@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const galleryImages = [
   {
     index: 0,
     src: "/image-10.webp",
-    alt: "Bright Pacific apartment bedroom",
+    alt: "Bay Residences bright bedroom",
     className: "tall reveal reveal-delay-1",
   },
   {
     index: 1,
     src: "/image-12.webp",
-    alt: "Bright Pacific apartment living and dining area",
+    alt: "Bay Residences bright living and dining area",
     className: "reveal reveal-delay-2",
   },
   {
@@ -21,27 +22,28 @@ const galleryImages = [
   },
   {
     index: 3,
-    src: "/pacific-apt-16.webp",
-    alt: "Hayat Island beach near Pacific apartments",
+    src: "/image-5.webp",
+    alt: "Bay Residences balcony with sea view",
     className: "wide reveal reveal-delay-2",
   },
   {
     index: 4,
     src: "/image-9.webp",
-    alt: "Bright Pacific apartment bedroom detail",
+    alt: "Bay Residences bedroom detail",
     className: "reveal reveal-delay-4",
   },
 ];
 
 const stripImages = [
-  "/pacific-apt-1.webp",
-  "/pacific-apt-3.webp",
-  "/image-15.webp",
+  "/image-1.webp",
+  "/image-2.webp",
+  "/image-4.webp",
+  "/image-6.webp",
   "/image-19.webp",
-  "/image-5.webp",
 ];
 
 export default function Gallery() {
+  const navigate = useNavigate();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIdx, setCurrentIdx] = useState(0);
 
@@ -94,9 +96,14 @@ export default function Gallery() {
             <div className="section-label">Gallery</div>
             <h2 className="section-title">A Glimpse of Paradise</h2>
           </div>
-          <a href="#" className="btn-outline" style={{ marginBottom: "4px" }}>
+          <button
+            className="btn-outline"
+            style={{ marginBottom: "4px" }}
+            onClick={() => navigate("/gallery")}
+            aria-label="View full property gallery"
+          >
             View Full Gallery
-          </a>
+          </button>
         </div>
 
         <div className="gallery-grid" id="galleryGrid">

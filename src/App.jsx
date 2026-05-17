@@ -17,6 +17,7 @@ import Partnerships from "./pages/Partnerships";
 import PartnershipAgreements from "./pages/PartnershipAgreements";
 import RealEstateAgencies from "./pages/RealEstateAgencies";
 import PropertyDetails from "./pages/PropertyDetails";
+import GalleryPage from "./pages/GalleryPage";
 
 const SEO_BY_PATH = {
   "/": {
@@ -73,6 +74,11 @@ const SEO_BY_PATH = {
     title: "Property Details | Holiday Home Host",
     description:
       "Explore detailed information about our premium holiday home listings in Ras Al Khaimah including amenities, house rules, and availability.",
+  },
+  "/gallery": {
+    title: "Property Gallery | Holiday Home Host",
+    description:
+      "Browse our full photo gallery of premium holiday homes in Ras Al Khaimah — Bay Residences on Hayat Island and Pacific Apartment on Al Marjan Island.",
   },
 };
 
@@ -189,6 +195,7 @@ export default function App() {
         <Route path="/partnership-agreements" element={<PartnershipAgreements />} />
         <Route path="/real-estate-agencies" element={<RealEstateAgencies />} />
         <Route path="/properties/:slug" element={<PropertyDetails />} />
+        <Route path="/gallery" element={<GalleryPage />} />
       </Routes>
 
       <Footer />

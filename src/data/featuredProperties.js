@@ -19,16 +19,17 @@ export const featuredProperties = [
     priceLabel: "per night",
     shortDescription:
       "Luxury 1BR apartment in the newly completed Bay Residences (2026) on Hayat Island, Mina Al Arab. Prime beachfront location with private beach access, infinity pools, and a sea-view balcony offering a five-star resort atmosphere.",
-    image: "/pacific-apt-4.webp",
+    image: "/image-1.webp",
     buttonText: "Check Availability",
     fullData: {
       images: [
-        "/pacific-apt-4.webp",
-        "/pacific-apt-3.webp",
-        "/pacific-apt-5.webp",
-        "/pacific-apt-6.webp",
-        "/pacific-apt-7.webp",
-        "/pacific-apt-8.webp",
+        "/image-1.webp",
+        "/image-2.webp",
+        "/image-5.webp",
+        "/image-7.webp",
+        "/image-3.webp",
+        "/image-4.webp",
+        "/image-6.webp",
       ],
       description:
         "Luxury 1BR apartment in Bay Residences on Hayat Island featuring beachfront access, infinity pools, sea views, and premium amenities. Located near InterContinental, Anantara Resort, Al Hamra Mall and Golf Club, with easy access to RAK Airport and Dubai.\n\nThe bedroom features a king-size bed with premium-quality linens, built-in wardrobes, large windows, and direct sea views. The bathroom includes a shower combination, vanity with mirror, and fresh towels. The fully equipped kitchen has a refrigerator, oven, stovetop, microwave, cookware, utensils, and all dining essentials.\n\nThe living area offers a comfortable sofa, coffee table, flat-screen TV, free high-speed WiFi, and balcony access. Step out to your private balcony for Hayat Island beach views, a seating area, and the perfect morning coffee or relaxation spot.",
@@ -135,17 +136,20 @@ export const featuredProperties = [
     priceLabel: "per night",
     shortDescription:
       "Luxury 2-bedroom apartment in Pacific, Al Marjan Island with direct beach access, swimming pools, and private balcony overlooking serene sea views. Ideal for families and groups seeking a premium coastal stay.",
-    image: "/pacific-apt-9.webp",
+    image: "/pacific-apt-2.webp",
     buttonText: "Check Availability",
     fullData: {
       images: [
+        "/pacific-apt-2.webp",
+        "/pacific-apt-4.webp",
+        "/pacific-apt-1.webp",
+        "/pacific-apt-3.webp",
+        "/pacific-apt-6.webp",
+        "/pacific-apt-14.webp",
         "/pacific-apt-9.webp",
         "/pacific-apt-10.webp",
         "/pacific-apt-11.webp",
-        "/pacific-apt-12.webp",
-        "/pacific-apt-13.webp",
-        "/pacific-apt-14.webp",
-        "/pacific-apt-15.webp",
+        "/pacific-apt-18.webp",
       ],
       description:
         "Escape to this stunning 2-bedroom luxury apartment in the prestigious Pacific tower on Al Marjan Island. Perfectly positioned with a private balcony that offers uninterrupted sea views, this residence is a sanctuary of coastal elegance. The spacious layout comfortably accommodates up to 5 guests across two well-appointed bedrooms and three bathrooms, making it ideal for families or small groups. Direct beach access lets you step from your door to pristine sand and turquoise waters, while resort-grade swimming pools, a state-of-the-art fitness room, and a shared tennis court ensure there is always something to enjoy. High-speed WiFi, air conditioning, and secure covered parking complete this premium holiday experience.",

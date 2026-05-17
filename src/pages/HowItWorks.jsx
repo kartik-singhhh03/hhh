@@ -60,7 +60,7 @@ export default function HowItWorks() {
     <main>
       {/* PAGE HERO */}
       <div className="page-hero">
-        <div className="page-hero-bg" style={{ backgroundImage: "url('/pacific-apt-2.webp')" }}></div>
+        <div className="page-hero-bg" style={{ backgroundImage: "url('/image-6.webp')" }}></div>
         <div className="page-hero-overlay"></div>
         <div className="container">
           <div className="section-label">How It Works</div>

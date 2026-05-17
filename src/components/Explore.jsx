@@ -5,8 +5,8 @@ const HAYAT_CARDS = [
     tag: "Beachfront",
     title: "Hayat Island Beach",
     desc: "Clear coastal water and soft sand within easy reach of the apartment.",
-    image: "/pacific-apt-16.webp",
-    alt: "Hayat Island beach beside Pacific apartments",
+    image: "/image-6.webp",
+    alt: "Bay Residences pool and sea view on Hayat Island",
   },
   {
     tag: "Resort Living",
@@ -20,8 +20,8 @@ const HAYAT_CARDS = [
     tag: "Amenities",
     title: "Sea-View Fitness",
     desc: "On-site fitness facilities support longer, more comfortable guest stays.",
-    image: "/pacific-apt-12.webp",
-    alt: "Pacific apartment gym overlooking the sea",
+    image: "/image-5.webp",
+    alt: "Bay Residences balcony with sea view",
     delay: 2,
   },
   {
@@ -29,7 +29,7 @@ const HAYAT_CARDS = [
     title: "Bright Living Spaces",
     desc: "Light interiors, sea views, and practical layouts designed for repeatable guest satisfaction.",
     image: "/image-12.webp",
-    alt: "Pacific apartment living room and dining area",
+    alt: "Bay Residences apartment living room and dining area",
     delay: 3,
   },
 ];
