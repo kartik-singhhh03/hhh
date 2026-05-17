@@ -25,12 +25,12 @@ export default function Hero() {
   return (
     <section className="hero" id="hero">
       <div
-        className="hero-bg"
-        id="heroBg"
-        ref={bgRef}
-        style={{
-          backgroundImage: "url('/image-7.webp')",
-        }}
+     className="hero-bg"
+id="heroBg"
+ref={bgRef}
+style={{
+  backgroundImage: `url("https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&q=80&w=2000")`,
+}}
       ></div>
       <div className="hero-overlay"></div>
       <div className="hero-content">
