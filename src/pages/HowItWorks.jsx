@@ -60,7 +60,7 @@ export default function HowItWorks() {
     <main>
       {/* PAGE HERO */}
       <div className="page-hero">
-        <div className="page-hero-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1600&q=80')" }}></div>
+        <div className="page-hero-bg" style={{ backgroundImage: "url('/pacific-apt-2.webp')" }}></div>
         <div className="page-hero-overlay"></div>
         <div className="container">
           <div className="section-label">How It Works</div>
@@ -156,24 +156,24 @@ export default function HowItWorks() {
             <h2 className="section-title" style={{ textAlign: "center" }}>Your Onboarding Timeline</h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(4,1fr)", gap: "20px" }} className="reveal">
-            <div style={{ textAlign: "center", padding: "32px 20px", background: "rgba(255,255,255,.04)", border: "1px solid rgba(143,179,194,.1)", borderRadius: "20px" }}>
+            <div style={{ textAlign: "center", padding: "32px 20px", background: "rgba(255,255,255,.88)", border: "1px solid rgba(144,203,220,.1)", borderRadius: "20px" }}>
               <div style={{ fontFamily: "'Playfair Display',serif", fontSize: "2.2rem", color: "var(--primary)", fontWeight: 700 }}>Day 1</div>
-              <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".85rem", color: "var(--white)", fontWeight: 600, margin: "8px 0 4px" }}>Initial Consultation</div>
+              <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".85rem", color: "var(--text-dark)", fontWeight: 600, margin: "8px 0 4px" }}>Initial Consultation</div>
               <div style={{ fontSize: ".8rem", color: "var(--text-muted)" }}>Property assessment and agreement signing</div>
             </div>
-            <div style={{ textAlign: "center", padding: "32px 20px", background: "rgba(255,255,255,.04)", border: "1px solid rgba(143,179,194,.1)", borderRadius: "20px" }}>
+            <div style={{ textAlign: "center", padding: "32px 20px", background: "rgba(255,255,255,.88)", border: "1px solid rgba(144,203,220,.1)", borderRadius: "20px" }}>
               <div style={{ fontFamily: "'Playfair Display',serif", fontSize: "2.2rem", color: "var(--primary)", fontWeight: 700 }}>Day 3</div>
-              <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".85rem", color: "var(--white)", fontWeight: 600, margin: "8px 0 4px" }}>Photo Shoot</div>
+              <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".85rem", color: "var(--text-dark)", fontWeight: 600, margin: "8px 0 4px" }}>Photo Shoot</div>
               <div style={{ fontSize: ".8rem", color: "var(--text-muted)" }}>Professional photography and virtual tour</div>
             </div>
-            <div style={{ textAlign: "center", padding: "32px 20px", background: "rgba(255,255,255,.04)", border: "1px solid rgba(143,179,194,.1)", borderRadius: "20px" }}>
+            <div style={{ textAlign: "center", padding: "32px 20px", background: "rgba(255,255,255,.88)", border: "1px solid rgba(144,203,220,.1)", borderRadius: "20px" }}>
               <div style={{ fontFamily: "'Playfair Display',serif", fontSize: "2.2rem", color: "var(--primary)", fontWeight: 700 }}>Day 7</div>
-              <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".85rem", color: "var(--white)", fontWeight: 600, margin: "8px 0 4px" }}>Go Live</div>
+              <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".85rem", color: "var(--text-dark)", fontWeight: 600, margin: "8px 0 4px" }}>Go Live</div>
               <div style={{ fontSize: ".8rem", color: "var(--text-muted)" }}>Listings published and marketing activated</div>
             </div>
-            <div style={{ textAlign: "center", padding: "32px 20px", background: "rgba(143,179,194,.1)", border: "1px solid var(--primary)", borderRadius: "20px" }}>
+            <div style={{ textAlign: "center", padding: "32px 20px", background: "rgba(144,203,220,.1)", border: "1px solid var(--primary)", borderRadius: "20px" }}>
               <div style={{ fontFamily: "'Playfair Display',serif", fontSize: "2.2rem", color: "var(--primary)", fontWeight: 700 }}>Day 14</div>
-              <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".85rem", color: "var(--white)", fontWeight: 600, margin: "8px 0 4px" }}>First Booking</div>
+              <div style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".85rem", color: "var(--text-dark)", fontWeight: 600, margin: "8px 0 4px" }}>First Booking</div>
               <div style={{ fontSize: ".8rem", color: "var(--text-muted)" }}>Average time to first confirmed guest</div>
             </div>
           </div>

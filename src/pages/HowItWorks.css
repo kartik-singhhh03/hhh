@@ -21,13 +21,13 @@
 .tm-num-wrap { flex-shrink: 0; }
 .tm-num {
   width: 56px; height: 56px; border-radius: 50%;
-  background: var(--primary); color: var(--luxury-dark);
+  background: var(--primary); color: var(--text-dark);
   font-family: var(--font-serif); font-size: 1.2rem; font-weight: 700;
   display: flex; align-items: center; justify-content: center;
 }
 .tm-content { padding-top: 12px; }
 .tm-content h3 {
   font-family: var(--font-ui); font-size: 1rem; font-weight: 700;
-  color: var(--white); margin-bottom: 6px;
+  color: var(--text-dark); margin-bottom: 6px;
 }
 .tm-content p { font-size: .85rem; color: var(--text-muted); line-height: 1.8; }

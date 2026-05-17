@@ -1,10 +1,14 @@
 /* Commission Hero fee display */
 .fee-hero {
-  background: #F3F7FA;
-  padding: 120px 0;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(144,203,220,.32), transparent 30%),
+    radial-gradient(circle at 88% 8%, rgba(244,233,215,.78), transparent 34%),
+    linear-gradient(135deg, var(--sand-soft), var(--bg-soft));
+  padding: 188px 0 108px;
   position: relative;
   overflow: hidden;
   text-align: center;
+  border-bottom: 1px solid var(--border);
 }
 .fee-display {
   position: relative;
@@ -25,7 +29,7 @@
   font-family: var(--font-serif);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
   font-weight: 700;
-  color: #92B7D1;
+  color: var(--primary-dark);
   line-height: 1;
   align-self: flex-start;
   padding-top: 12px;
@@ -36,14 +40,14 @@
   font-weight: 700;
   letter-spacing: .25em;
   text-transform: uppercase;
-  color: #3D5A65;
+  color: var(--text-body);
   display: block;
   margin-top: -8px;
 }
 .fee-subtitle {
   font-family: var(--font-serif);
   font-size: clamp(1.1rem, 2vw, 1.5rem);
-  color: #3D5A65;
+  color: var(--text-body);
   line-height: 1.5;
   max-width: 580px;
   margin: 0 auto 16px;
@@ -52,7 +56,7 @@
 }
 
 /* What's included grid */
-.included-section { background: var(--dark-bg); padding: 100px 0; }
+.included-section { background: var(--bg-main); padding: 100px 0; }
 .included-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -60,13 +64,14 @@
   margin-top: 60px;
 }
 .included-card {
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(143,179,194,.12);
-  border-radius: 20px;
+  background: linear-gradient(145deg, var(--white), var(--sand-soft));
+  border: 1px solid var(--border);
+  border-radius: 18px;
   padding: 36px 28px;
   transition: all .35s;
   position: relative;
   overflow: hidden;
+  box-shadow: var(--shadow-sm);
 }
 .included-card::before {
   content: '';
@@ -78,45 +83,48 @@
   transform-origin: left;
   transition: transform .5s ease;
 }
-.included-card:hover { transform: translateY(-6px); border-color: rgba(143,179,194,.28); }
+.included-card:hover { transform: translateY(-6px); border-color: var(--border-hover); box-shadow: var(--shadow-md); }
 .included-card:hover::before { transform: scaleX(1); }
 .included-card-icon {
   width: 52px; height: 52px;
-  background: linear-gradient(135deg, rgba(146,183,209,.15), rgba(116,164,178,.08));
-  border: 1px solid rgba(146,183,209,.2);
+  background: linear-gradient(135deg, rgba(144,203,220,.22), rgba(244,233,215,.38));
+  border: 1px solid var(--border);
   border-radius: 14px;
   display: flex; align-items: center; justify-content: center;
   margin-bottom: 20px;
 }
-.included-card-icon .material-symbols-outlined { font-size: 26px; color: var(--primary); }
+.included-card-icon .material-symbols-outlined { font-size: 26px; color: var(--primary-dark); }
 .included-card h3 {
   font-family: var(--font-ui);
   font-size: .92rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--text-dark);
   margin-bottom: 10px;
 }
-.included-card p { font-size: .82rem; color: var(--text-muted); line-height: 1.75; }
+.included-card p { font-size: .82rem; color: var(--text-body); line-height: 1.75; }
 
 /* Comparison table */
-.comparison-section { background: var(--luxury-dark); padding: 100px 0; }
+.comparison-section { background: var(--sand-soft); padding: 100px 0; }
 .comparison-table {
   margin-top: 60px;
-  border: 1px solid rgba(143,179,194,.15);
+  border: 1px solid var(--border);
   border-radius: 20px;
-  overflow: hidden;
+  overflow-x: auto;
+  background: var(--white);
+  box-shadow: var(--shadow-md);
 }
 .comparison-row {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  border-bottom: 1px solid rgba(143,179,194,.08);
+  min-width: 660px;
+  border-bottom: 1px solid rgba(144,203,220,.18);
 }
 .comparison-row:last-child { border-bottom: none; }
-.comparison-row.header { background: rgba(143,179,194,.08); }
+.comparison-row.header { background: rgba(144,203,220,.14); }
 .comparison-cell {
   padding: 20px 24px;
   font-size: .88rem;
-  color: var(--text-light);
+  color: var(--text-body);
   display: flex;
   align-items: center;
 }
@@ -127,14 +135,14 @@
   font-weight: 700;
   letter-spacing: .15em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--text-dark);
 }
-.comparison-cell.hhh-col { background: rgba(146,183,209,.07); color: var(--primary); font-weight: 600; }
-.check-icon { color: var(--primary); }
-.cross-icon { color: rgba(143,179,194,.35); }
+.comparison-cell.hhh-col { background: rgba(144,203,220,.12); color: var(--secondary); font-weight: 700; }
+.check-icon { color: var(--secondary); }
+.cross-icon { color: rgba(144,203,220,.35); }
 
 /* Value Props */
-.value-props-section { background: var(--dark-bg); padding: 100px 0; }
+.value-props-section { background: var(--bg-main); padding: 100px 0; }
 .value-props-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -145,27 +153,28 @@
   display: flex;
   gap: 20px;
   padding: 28px 28px;
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(143,179,194,.1);
+  background: linear-gradient(145deg, var(--white), var(--sand-soft));
+  border: 1px solid var(--border);
   border-radius: 16px;
   transition: var(--transition);
+  box-shadow: var(--shadow-sm);
 }
-.value-prop:hover { border-color: rgba(143,179,194,.3); transform: translateX(6px); }
+.value-prop:hover { border-color: var(--border-hover); box-shadow: var(--shadow-md); transform: translateX(6px); }
 .value-prop-icon {
   width: 48px; height: 48px; flex-shrink: 0;
   background: linear-gradient(135deg, var(--primary), var(--primary-dark));
   border-radius: 12px;
   display: flex; align-items: center; justify-content: center;
 }
-.value-prop-icon .material-symbols-outlined { font-size: 22px; color: var(--white); }
+.value-prop-icon .material-symbols-outlined { font-size: 22px; color: var(--text-dark); }
 .value-prop h4 {
   font-family: var(--font-ui);
   font-size: .9rem;
   font-weight: 700;
-  color: var(--white);
+  color: var(--text-dark);
   margin-bottom: 6px;
 }
-.value-prop p { font-size: .82rem; color: var(--text-muted); line-height: 1.7; }
+.value-prop p { font-size: .82rem; color: var(--text-body); line-height: 1.7; }
 
 @media (max-width: 900px) {
   .included-grid { grid-template-columns: 1fr 1fr; }
@@ -175,4 +184,6 @@
 @media (max-width: 600px) {
   .included-grid { grid-template-columns: 1fr; }
   .comparison-cell { padding: 14px 16px; font-size: .78rem; }
+  .fee-hero { padding-top: 150px; }
+  .fee-number { font-size: 82px; }
 }

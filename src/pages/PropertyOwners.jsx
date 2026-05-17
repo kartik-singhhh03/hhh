@@ -25,7 +25,7 @@ export default function PropertyOwners() {
     <main>
       {/* PAGE HERO */}
       <div className="page-hero">
-        <div className="page-hero-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80')" }}></div>
+        <div className="page-hero-bg" style={{ backgroundImage: "url('/image-5.webp')" }}></div>
         <div className="page-hero-overlay"></div>
         <div className="container">
           <div className="section-label">For Property Owners</div>
@@ -98,49 +98,49 @@ export default function PropertyOwners() {
               <h2 className="section-title" style={{ color: "#1C3240" }}>What Could Your<br />Property Earn?</h2>
               <p className="section-desc" style={{ marginBottom: "32px", color: "#1C3240" }}>Hayat Island properties are in exceptionally high demand year-round. Our owners consistently outperform market benchmarks by an average of 30% thanks to our premium positioning and dynamic pricing.</p>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "20px", marginBottom: "36px" }}>
-                <div style={{ background: "rgba(143,179,194,.08)", border: "1px solid rgba(143,179,194,.2)", borderRadius: "16px", padding: "24px", textAlign: "center" }}>
+                <div style={{ background: "rgba(144,203,220,.08)", border: "1px solid rgba(144,203,220,.2)", borderRadius: "16px", padding: "24px", textAlign: "center" }}>
                   <div style={{ fontFamily: "'Playfair Display',serif", fontSize: "2rem", fontWeight: 700, color: "var(--primary)", marginBottom: "6px" }}>AED 650</div>
                   <div style={{ fontSize: ".75rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: ".1em" }}>Avg. Nightly Rate</div>
                 </div>
-                <div style={{ background: "rgba(143,179,194,.08)", border: "1px solid rgba(143,179,194,.2)", borderRadius: "16px", padding: "24px", textAlign: "center" }}>
+                <div style={{ background: "rgba(144,203,220,.08)", border: "1px solid rgba(144,203,220,.2)", borderRadius: "16px", padding: "24px", textAlign: "center" }}>
                   <div style={{ fontFamily: "'Playfair Display',serif", fontSize: "2rem", fontWeight: 700, color: "var(--primary)", marginBottom: "6px" }}>82%</div>
                   <div style={{ fontSize: ".75rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: ".1em" }}>Avg. Occupancy</div>
                 </div>
-                <div style={{ background: "rgba(143,179,194,.08)", border: "1px solid rgba(143,179,194,.2)", borderRadius: "16px", padding: "24px", textAlign: "center" }}>
+                <div style={{ background: "rgba(144,203,220,.08)", border: "1px solid rgba(144,203,220,.2)", borderRadius: "16px", padding: "24px", textAlign: "center" }}>
                   <div style={{ fontFamily: "'Playfair Display',serif", fontSize: "2rem", fontWeight: 700, color: "var(--primary)", marginBottom: "6px" }}>AED 16K</div>
                   <div style={{ fontSize: ".75rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: ".1em" }}>Avg. Monthly Revenue</div>
                 </div>
-                <div style={{ background: "rgba(143,179,194,.08)", border: "1px solid rgba(143,179,194,.2)", borderRadius: "16px", padding: "24px", textAlign: "center" }}>
+                <div style={{ background: "rgba(144,203,220,.08)", border: "1px solid rgba(144,203,220,.2)", borderRadius: "16px", padding: "24px", textAlign: "center" }}>
                   <div style={{ fontFamily: "'Playfair Display',serif", fontSize: "2rem", fontWeight: 700, color: "var(--primary)", marginBottom: "6px" }}>AED 195K</div>
                   <div style={{ fontSize: ".75rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: ".1em" }}>Avg. Annual Revenue</div>
                 </div>
               </div>
               <Link to="/roi-calculator" className="btn-primary-dark">Calculate Your Revenue →</Link>
             </div>
-            <div style={{ background: "rgba(28,50,64,0.2)", border: "1px solid rgba(143,179,194,.15)", borderRadius: "24px", padding: "48px" }}>
+            <div style={{ background: "rgba(144,203,220,.28)", border: "1px solid rgba(144,203,220,.15)", borderRadius: "24px", padding: "48px" }}>
               <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.4rem", color: "#1C3240", marginBottom: "28px" }}>Management Services Included</h3>
               <div style={{ display: "flex", flexDirection: "column", gap: "16px" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "16px", padding: "14px", background: "rgba(143,179,194,.06)", borderRadius: "10px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "16px", padding: "14px", background: "rgba(144,203,220,.06)", borderRadius: "10px" }}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1C3240" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><polyline points="20 6 9 17 4 12" /></svg>
                   <span style={{ fontSize: ".9rem", color: "#1C3240" }}>RAKTDA Holiday Home Permit Management</span>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "16px", padding: "14px", background: "rgba(143,179,194,.06)", borderRadius: "10px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "16px", padding: "14px", background: "rgba(144,203,220,.06)", borderRadius: "10px" }}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1C3240" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><polyline points="20 6 9 17 4 12" /></svg>
                   <span style={{ fontSize: ".9rem", color: "#1C3240" }}>Professional listing creation &amp; optimisation</span>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "16px", padding: "14px", background: "rgba(143,179,194,.06)", borderRadius: "10px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "16px", padding: "14px", background: "rgba(144,203,220,.06)", borderRadius: "10px" }}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1C3240" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><polyline points="20 6 9 17 4 12" /></svg>
                   <span style={{ fontSize: ".9rem", color: "#1C3240" }}>Full guest screening &amp; background checks</span>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "16px", padding: "14px", background: "rgba(143,179,194,.06)", borderRadius: "10px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "16px", padding: "14px", background: "rgba(144,203,220,.06)", borderRadius: "10px" }}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1C3240" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><polyline points="20 6 9 17 4 12" /></svg>
                   <span style={{ fontSize: ".9rem", color: "#1C3240" }}>24 / 7 emergency maintenance response</span>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "16px", padding: "14px", background: "rgba(143,179,194,.06)", borderRadius: "10px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "16px", padding: "14px", background: "rgba(144,203,220,.06)", borderRadius: "10px" }}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1C3240" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><polyline points="20 6 9 17 4 12" /></svg>
                   <span style={{ fontSize: ".9rem", color: "#1C3240" }}>Insurance &amp; security deposit management</span>
                 </div>
-                <div style={{ display: "flex", alignItems: "center", gap: "16px", padding: "14px", background: "rgba(143,179,194,.06)", borderRadius: "10px" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: "16px", padding: "14px", background: "rgba(144,203,220,.06)", borderRadius: "10px" }}>
                   <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1C3240" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ flexShrink: 0 }}><polyline points="20 6 9 17 4 12" /></svg>
                   <span style={{ fontSize: ".9rem", color: "#1C3240" }}>Monthly payouts &amp; financial reporting</span>
                 </div>
@@ -217,7 +217,7 @@ export default function PropertyOwners() {
             <p>Join our growing portfolio of luxury Ras Al Khaimah holiday homes. Our team will guide you through every step of the onboarding process.</p>
             <div className="cta-buttons">
               <Link to="/how-it-works" className="btn-primary">See Listing Process</Link>
-              <Link to="/#contact" className="btn-outline" style={{ color: "#1C3240", borderColor: "rgba(28,50,64,0.2)" }}>Contact Us Today</Link>
+              <Link to="/#contact" className="btn-outline" style={{ color: "#1C3240", borderColor: "rgba(144,203,220,.28)" }}>Contact Us Today</Link>
             </div>
           </div>
         </div>

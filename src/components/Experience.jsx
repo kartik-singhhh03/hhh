@@ -60,7 +60,7 @@ export default function Experience() {
       <div className="container">
         <div className="experience-wrap">
           <div className="experience-image reveal">
-            <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=85" alt="Luxury apartment interior" loading="lazy" />
+            <img src="/image-12.webp" alt="Bright Pacific apartment living and dining area" loading="lazy" />
             <div className="experience-accent"></div>
           </div>
           <div className="experience-content reveal reveal-delay-2">

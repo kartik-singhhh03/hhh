@@ -25,7 +25,7 @@ export default function RealEstateAgencies() {
     <main>
       {/* PAGE HERO */}
       <div className="page-hero">
-        <div className="page-hero-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1600&q=80')" }}></div>
+        <div className="page-hero-bg" style={{ backgroundImage: "url('/image-1.webp')" }}></div>
         <div className="page-hero-overlay"></div>
         <div className="container">
           <div className="section-label">Real Estate Agencies</div>
@@ -88,26 +88,26 @@ export default function RealEstateAgencies() {
               </p>
 
               <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "36px" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: "20px", background: "rgba(255,255,255,.04)", border: "1px solid rgba(143,179,194,.12)", borderRadius: "14px", padding: "20px 24px" }}>
-                  <div style={{ width: "56px", height: "56px", background: "rgba(143,179,194,.15)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Playfair Display',serif", fontSize: "1.2rem", fontWeight: 700, color: "var(--primary)", flexShrink: 0 }}>5%</div>
+                <div style={{ display: "flex", alignItems: "center", gap: "20px", background: "rgba(255,255,255,.88)", border: "1px solid rgba(144,203,220,.12)", borderRadius: "14px", padding: "20px 24px" }}>
+                  <div style={{ width: "56px", height: "56px", background: "rgba(144,203,220,.15)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Playfair Display',serif", fontSize: "1.2rem", fontWeight: 700, color: "var(--primary)", flexShrink: 0 }}>5%</div>
                   <div>
-                    <div style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 600, color: "var(--white)", fontSize: ".95rem" }}>Standard Partner</div>
+                    <div style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 600, color: "var(--text-dark)", fontSize: ".95rem" }}>Standard Partner</div>
                     <div style={{ fontSize: ".82rem", color: "var(--text-muted)" }}>1–5 active referred owners — 5% of management fee earned per owner</div>
                   </div>
                 </div>
 
-                <div style={{ display: "flex", alignItems: "center", gap: "20px", background: "rgba(255,255,255,.04)", border: "1px solid rgba(143,179,194,.12)", borderRadius: "14px", padding: "20px 24px" }}>
-                  <div style={{ width: "56px", height: "56px", background: "rgba(143,179,194,.15)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Playfair Display',serif", fontSize: "1.2rem", fontWeight: 700, color: "var(--primary)", flexShrink: 0 }}>8%</div>
+                <div style={{ display: "flex", alignItems: "center", gap: "20px", background: "rgba(255,255,255,.88)", border: "1px solid rgba(144,203,220,.12)", borderRadius: "14px", padding: "20px 24px" }}>
+                  <div style={{ width: "56px", height: "56px", background: "rgba(144,203,220,.15)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Playfair Display',serif", fontSize: "1.2rem", fontWeight: 700, color: "var(--primary)", flexShrink: 0 }}>8%</div>
                   <div>
-                    <div style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 600, color: "var(--white)", fontSize: ".95rem" }}>Premium Partner</div>
+                    <div style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 600, color: "var(--text-dark)", fontSize: ".95rem" }}>Premium Partner</div>
                     <div style={{ fontSize: ".82rem", color: "var(--text-muted)" }}>6–15 active referred owners — 8% of management fee per owner</div>
                   </div>
                 </div>
 
-                <div style={{ display: "flex", alignItems: "center", gap: "20px", background: "rgba(143,179,194,.08)", border: "1px solid var(--primary)", borderRadius: "14px", padding: "20px 24px" }}>
-                  <div style={{ width: "56px", height: "56px", background: "var(--primary)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Playfair Display',serif", fontSize: "1.2rem", fontWeight: 700, color: "var(--luxury-dark)", flexShrink: 0 }}>12%</div>
+                <div style={{ display: "flex", alignItems: "center", gap: "20px", background: "rgba(144,203,220,.08)", border: "1px solid var(--primary)", borderRadius: "14px", padding: "20px 24px" }}>
+                  <div style={{ width: "56px", height: "56px", background: "var(--primary)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Playfair Display',serif", fontSize: "1.2rem", fontWeight: 700, color: "var(--text-dark)", flexShrink: 0 }}>12%</div>
                   <div>
-                    <div style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 600, color: "var(--white)", fontSize: ".95rem" }}>Elite Partner</div>
+                    <div style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 600, color: "var(--text-dark)", fontSize: ".95rem" }}>Elite Partner</div>
                     <div style={{ fontSize: ".82rem", color: "var(--text-muted)" }}>16+ active referred owners — 12% of management fee per owner + co-branding</div>
                   </div>
                 </div>
@@ -116,31 +116,31 @@ export default function RealEstateAgencies() {
             </div>
 
             <div className="reveal reveal-delay-2">
-              <div style={{ background: "rgba(255,255,255,.04)", border: "1px solid rgba(143,179,194,.15)", borderRadius: "24px", padding: "40px" }}>
-                <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.3rem", color: "var(--white)", marginBottom: "24px" }}>Example Earning Scenario</h3>
+              <div style={{ background: "rgba(255,255,255,.88)", border: "1px solid rgba(144,203,220,.15)", borderRadius: "24px", padding: "40px" }}>
+                <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.3rem", color: "var(--text-dark)", marginBottom: "24px" }}>Example Earning Scenario</h3>
                 <div style={{ display: "flex", flexDirection: "column", gap: "12px", fontSize: ".88rem" }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", padding: "12px 0", borderBottom: "1px solid rgba(143,179,194,.08)" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", padding: "12px 0", borderBottom: "1px solid rgba(144,203,220,.08)" }}>
                     <span style={{ color: "var(--text-muted)" }}>Referred owners</span>
-                    <span style={{ color: "var(--white)", fontWeight: 600 }}>8 owners</span>
+                    <span style={{ color: "var(--text-dark)", fontWeight: 600 }}>8 owners</span>
                   </div>
-                  <div style={{ display: "flex", justifyContent: "space-between", padding: "12px 0", borderBottom: "1px solid rgba(143,179,194,.08)" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", padding: "12px 0", borderBottom: "1px solid rgba(144,203,220,.08)" }}>
                     <span style={{ color: "var(--text-muted)" }}>Avg. monthly revenue per property</span>
-                    <span style={{ color: "var(--white)", fontWeight: 600 }}>AED 16,000</span>
+                    <span style={{ color: "var(--text-dark)", fontWeight: 600 }}>AED 16,000</span>
                   </div>
-                  <div style={{ display: "flex", justifyContent: "space-between", padding: "12px 0", borderBottom: "1px solid rgba(143,179,194,.08)" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", padding: "12px 0", borderBottom: "1px solid rgba(144,203,220,.08)" }}>
                     <span style={{ color: "var(--text-muted)" }}>HHH management fee (15%)</span>
-                    <span style={{ color: "var(--white)", fontWeight: 600 }}>AED 2,400/mo per property</span>
+                    <span style={{ color: "var(--text-dark)", fontWeight: 600 }}>AED 2,400/mo per property</span>
                   </div>
-                  <div style={{ display: "flex", justifyContent: "space-between", padding: "12px 0", borderBottom: "1px solid rgba(143,179,194,.08)" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", padding: "12px 0", borderBottom: "1px solid rgba(144,203,220,.08)" }}>
                     <span style={{ color: "var(--text-muted)" }}>Your commission rate (Premium)</span>
                     <span style={{ color: "var(--primary)", fontWeight: 700 }}>8%</span>
                   </div>
-                  <div style={{ display: "flex", justifyContent: "space-between", padding: "16px", background: "rgba(143,179,194,.1)", borderRadius: "12px", marginTop: "8px" }}>
-                    <span style={{ color: "var(--white)", fontWeight: 600 }}>Your monthly earnings</span>
+                  <div style={{ display: "flex", justifyContent: "space-between", padding: "16px", background: "rgba(144,203,220,.1)", borderRadius: "12px", marginTop: "8px" }}>
+                    <span style={{ color: "var(--text-dark)", fontWeight: 600 }}>Your monthly earnings</span>
                     <span style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.4rem", color: "var(--primary)", fontWeight: 700 }}>AED 1,536</span>
                   </div>
-                  <div style={{ display: "flex", justifyContent: "space-between", padding: "16px", background: "rgba(143,179,194,.06)", borderRadius: "12px" }}>
-                    <span style={{ color: "var(--white)", fontWeight: 600 }}>Your annual earnings</span>
+                  <div style={{ display: "flex", justifyContent: "space-between", padding: "16px", background: "rgba(144,203,220,.06)", borderRadius: "12px" }}>
+                    <span style={{ color: "var(--text-dark)", fontWeight: 600 }}>Your annual earnings</span>
                     <span style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.4rem", color: "var(--primary)", fontWeight: 700 }}>AED 18,432</span>
                   </div>
                 </div>
@@ -158,28 +158,28 @@ export default function RealEstateAgencies() {
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "24px" }} className="reveal">
-            <div style={{ textAlign: "center", padding: "36px 20px", background: "rgba(255,255,255,.04)", border: "1px solid rgba(143,179,194,.1)", borderRadius: "20px" }}>
+            <div style={{ textAlign: "center", padding: "36px 20px", background: "rgba(255,255,255,.88)", border: "1px solid rgba(144,203,220,.1)", borderRadius: "20px" }}>
               <div style={{ color: "var(--primary)", marginBottom: "16px" }}><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /></svg></div>
               <div style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.8rem", fontWeight: 700, color: "var(--primary)", marginBottom: "8px" }}>1</div>
-              <h3 style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".9rem", fontWeight: 700, color: "var(--white)", marginBottom: "8px" }}>Apply Online</h3>
+              <h3 style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".9rem", fontWeight: 700, color: "var(--text-dark)", marginBottom: "8px" }}>Apply Online</h3>
               <p style={{ fontSize: ".8rem", color: "var(--text-muted)", lineHeight: 1.7 }}>Complete our simple agency partner application form online.</p>
             </div>
-            <div style={{ textAlign: "center", padding: "36px 20px", background: "rgba(255,255,255,.04)", border: "1px solid rgba(143,179,194,.1)", borderRadius: "20px" }}>
+            <div style={{ textAlign: "center", padding: "36px 20px", background: "rgba(255,255,255,.88)", border: "1px solid rgba(144,203,220,.1)", borderRadius: "20px" }}>
               <div style={{ color: "var(--primary)", marginBottom: "16px" }}><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg></div>
               <div style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.8rem", fontWeight: 700, color: "var(--primary)", marginBottom: "8px" }}>2</div>
-              <h3 style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".9rem", fontWeight: 700, color: "var(--white)", marginBottom: "8px" }}>Partnership Meeting</h3>
+              <h3 style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".9rem", fontWeight: 700, color: "var(--text-dark)", marginBottom: "8px" }}>Partnership Meeting</h3>
               <p style={{ fontSize: ".8rem", color: "var(--text-muted)", lineHeight: 1.7 }}>A 30-minute call to align on expectations and sign the partnership agreement.</p>
             </div>
-            <div style={{ textAlign: "center", padding: "36px 20px", background: "rgba(255,255,255,.04)", border: "1px solid rgba(143,179,194,.1)", borderRadius: "20px" }}>
+            <div style={{ textAlign: "center", padding: "36px 20px", background: "rgba(255,255,255,.88)", border: "1px solid rgba(144,203,220,.1)", borderRadius: "20px" }}>
               <div style={{ color: "var(--primary)", marginBottom: "16px" }}><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg></div>
               <div style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.8rem", fontWeight: 700, color: "var(--primary)", marginBottom: "8px" }}>3</div>
-              <h3 style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".9rem", fontWeight: 700, color: "var(--white)", marginBottom: "8px" }}>Marketing Kit</h3>
+              <h3 style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".9rem", fontWeight: 700, color: "var(--text-dark)", marginBottom: "8px" }}>Marketing Kit</h3>
               <p style={{ fontSize: ".8rem", color: "var(--text-muted)", lineHeight: 1.7 }}>Receive your branded partner kit — brochures, presentations, and co-branded assets.</p>
             </div>
-            <div style={{ textAlign: "center", padding: "36px 20px", background: "rgba(143,179,194,.08)", border: "1px solid var(--primary)", borderRadius: "20px" }}>
+            <div style={{ textAlign: "center", padding: "36px 20px", background: "rgba(144,203,220,.08)", border: "1px solid var(--primary)", borderRadius: "20px" }}>
               <div style={{ color: "var(--primary)", marginBottom: "16px" }}><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg></div>
               <div style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.8rem", fontWeight: 700, color: "var(--primary)", marginBottom: "8px" }}>4</div>
-              <h3 style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".9rem", fontWeight: 700, color: "var(--white)", marginBottom: "8px" }}>Start Earning</h3>
+              <h3 style={{ fontFamily: "'DM Sans',sans-serif", fontSize: ".9rem", fontWeight: 700, color: "var(--text-dark)", marginBottom: "8px" }}>Start Earning</h3>
               <p style={{ fontSize: ".8rem", color: "var(--text-muted)", lineHeight: 1.7 }}>Begin referring clients and tracking your commissions in real-time.</p>
             </div>
           </div>

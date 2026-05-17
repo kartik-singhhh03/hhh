@@ -7,8 +7,14 @@ export default function Property() {
         </div>
         <div className="property-wrap">
           <div className="property-image-wrap reveal reveal-delay-1">
-            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=900&q=85" alt="Luxury apartment" loading="lazy" />
-            <span className="property-badge">Sea View · Hayat Island</span>
+            <img
+              src="/pacific-apt-4.webp"
+              alt="Pacific apartment bedroom with sea view"
+              loading="lazy"
+            />
+            <span className="property-badge">
+              Sea View &middot; Hayat Island
+            </span>
             <div className="property-price-tag">
               <div className="price">AED 650</div>
               <div className="per">per night</div>
@@ -16,7 +22,11 @@ export default function Property() {
           </div>
           <div className="property-info reveal reveal-delay-2">
             <div className="section-label">Featured Property</div>
-            <h2>Luxury Sea View<br />Apartment, Hayat Island</h2>
+            <h2>
+              Luxury Sea View
+              <br />
+              Apartment, Hayat Island
+            </h2>
             <div className="property-location">
               <span className="material-symbols-outlined">place</span>
               Hayat Island, Mina Al Arab, Ras Al Khaimah
@@ -25,7 +35,7 @@ export default function Property() {
               <div className="spec-item">
                 <span className="material-symbols-outlined">group</span>
                 <span className="spec-label">Guests</span>
-                <span className="spec-value">2–4</span>
+                <span className="spec-value">2&ndash;4</span>
               </div>
               <div className="spec-item">
                 <span className="material-symbols-outlined">king_bed</span>
@@ -40,14 +50,25 @@ export default function Property() {
               <div className="spec-item">
                 <span className="material-symbols-outlined">straighten</span>
                 <span className="spec-label">Area</span>
-                <span className="spec-value">850 ft²</span>
+                <span className="spec-value">850 ft&sup2;</span>
               </div>
             </div>
-            <p className="property-desc">Wake up to panoramic Arabian Gulf views from this exquisitely appointed apartment on Hayat Island. Floor-to-ceiling windows, an expansive wrap-around balcony, fully equipped kitchen, and access to world-class resort amenities.</p>
-            <a href="#contact" className="btn-primary-dark" onClick={(e) => {
-              e.preventDefault();
-              document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-            }}>
+            <p className="property-desc">
+              Wake up to panoramic Arabian Gulf views from this exquisitely
+              appointed apartment on Hayat Island. Floor-to-ceiling windows, an
+              expansive wrap-around balcony, fully equipped kitchen, and access
+              to world-class resort amenities.
+            </p>
+            <a
+              href="#lodgify-booking"
+              className="btn-primary-dark"
+              onClick={(e) => {
+                e.preventDefault();
+                document
+                  .getElementById("lodgify-booking")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
               <span className="material-symbols-outlined">date_range</span>
               Check Availability
             </a>

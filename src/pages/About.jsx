@@ -122,10 +122,10 @@ export default function About() {
                 <span className="label">Founded</span>
               </div>
               <div className="story-img-main">
-                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=85" alt="Luxury apartment interior at Holiday Home Host" loading="lazy" />
+                <img src="/image-12.webp" alt="Bright Pacific apartment living room managed by Holiday Home Host" loading="lazy" />
               </div>
               <div className="story-img-float">
-                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=400&q=80" alt="Sea view from Hayat Island" loading="lazy" />
+                <img src="/image-5.webp" alt="Pacific apartment balcony with sea view" loading="lazy" />
               </div>
             </div>
             <div className="story-content reveal reveal-delay-2">
@@ -274,7 +274,7 @@ export default function About() {
           <div className="team-grid">
             <div className="team-card reveal reveal-delay-1">
               <div className="team-card-photo">
-                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=500&q=80" alt="Founder of Holiday Home Host" loading="lazy" />
+                <img src="/dara-img.webp" alt="Daria, founder of Holiday Home Host" loading="lazy" />
                 <div className="team-card-photo-overlay"></div>
                 <div className="team-social-links">
                   <a href="#" className="team-social-link" aria-label="LinkedIn">
@@ -286,14 +286,14 @@ export default function About() {
                 </div>
               </div>
               <div className="team-card-info">
-                <h3>Khalid Al Mansoori</h3>
-                <span className="team-card-role">Founder & CEO</span>
-                <p>Visionary behind HHH with 12+ years in UAE hospitality, passionate about redefining luxury short-term stays.</p>
+                <h3>Daria</h3>
+                <span className="team-card-role">Founder</span>
+                <p>Founder of HHH, bringing a refined hospitality eye to owner partnerships, guest experience, and premium coastal stays.</p>
               </div>
             </div>
             <div className="team-card reveal reveal-delay-2">
               <div className="team-card-photo">
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=500&q=80" alt="Operations Director" loading="lazy" />
+                <img src="/image-17.webp" alt="Guest-ready Pacific apartment dining and kitchen area" loading="lazy" />
                 <div className="team-card-photo-overlay"></div>
                 <div className="team-social-links">
                   <a href="#" className="team-social-link" aria-label="LinkedIn">
@@ -312,7 +312,7 @@ export default function About() {
             </div>
             <div className="team-card reveal reveal-delay-3">
               <div className="team-card-photo">
-                <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=500&q=80" alt="Guest Experience Manager" loading="lazy" />
+                <img src="/image-7.webp" alt="Bay Residences pool amenity" loading="lazy" />
                 <div className="team-card-photo-overlay"></div>
                 <div className="team-social-links">
                   <a href="#" className="team-social-link" aria-label="LinkedIn">
@@ -331,7 +331,7 @@ export default function About() {
             </div>
             <div className="team-card reveal reveal-delay-4">
               <div className="team-card-photo">
-                <img src="https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?w=500&q=80" alt="Marketing & Partnerships Lead" loading="lazy" />
+                <img src="/image-1.webp" alt="Bay Residences exterior in Ras Al Khaimah" loading="lazy" />
                 <div className="team-card-photo-overlay"></div>
                 <div className="team-social-links">
                   <a href="#" className="team-social-link" aria-label="LinkedIn">
@@ -363,7 +363,7 @@ export default function About() {
           </div>
           <div className="values-wrap">
             <div className="values-image reveal">
-              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=900&q=85" alt="Hayat Island beach, Ras Al Khaimah" loading="lazy" />
+              <img src="/image-5.webp" alt="Pacific apartment balcony overlooking the coast" loading="lazy" />
               <div className="values-image-tag">
                 <div className="values-image-tag-icon">
                   <span className="material-symbols-outlined">location_on</span>
@@ -421,7 +421,7 @@ export default function About() {
           </div>
           <div className="location-wrap">
             <div className="location-image reveal">
-              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=85" alt="Aerial view of Mina Al Arab, Ras Al Khaimah" loading="lazy" />
+              <img src="/image-1.webp" alt="Bay Residences exterior near Hayat Island, Ras Al Khaimah" loading="lazy" />
             </div>
             <div className="reveal reveal-delay-2">
               <p className="section-desc" style={{ marginBottom: "32px", maxWidth: "100%" }}>
@@ -530,7 +530,7 @@ export default function About() {
         <div className="container">
           <div className="about-cta-inner reveal">
             <div className="section-label" style={{ justifyContent: "center", marginBottom: "20px", color: "#1C3240" }}>
-              <span style={{ background: "rgba(28,50,64,0.2)" }}></span>Ready to Get Started?
+              <span style={{ background: "rgba(144,203,220,.28)" }}></span>Ready to Get Started?
             </div>
             <h2>
               Transform Your Property<br />Into a Premium Holiday Home
@@ -543,7 +543,7 @@ export default function About() {
                 <span className="material-symbols-outlined">home_work</span>
                 List Your Property
               </Link>
-              <Link to="/commission" className="btn-outline" style={{ color: "#1C3240", borderColor: "rgba(28,50,64,0.2)" }}>
+              <Link to="/commission" className="btn-outline" style={{ color: "#1C3240", borderColor: "rgba(144,203,220,.28)" }}>
                 <span className="material-symbols-outlined">percent</span>
                 Our Commission Model
               </Link>

@@ -25,7 +25,7 @@ export default function Partnerships() {
     <main>
       {/* PAGE HERO */}
       <div className="page-hero">
-        <div className="page-hero-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1600&q=80')" }}></div>
+        <div className="page-hero-bg" style={{ backgroundImage: "url('/image-3.webp')" }}></div>
         <div className="page-hero-overlay"></div>
         <div className="container">
           <div className="section-label">Partnerships</div>
@@ -95,27 +95,27 @@ export default function Partnerships() {
             <h2 className="section-title" style={{ textAlign: "center" }}>Find Your Perfect Partnership</h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "24px" }} className="reveal">
-            <div style={{ background: "rgba(143,179,194,.06)", border: "1px solid rgba(143,179,194,.2)", borderRadius: "24px", padding: "48px 32px", textAlign: "center", transition: "all .4s" }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(143,179,194,.15)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
+            <div style={{ background: "rgba(144,203,220,.06)", border: "1px solid rgba(144,203,220,.2)", borderRadius: "24px", padding: "48px 32px", textAlign: "center", transition: "all .4s" }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(144,203,220,.15)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
               <div style={{ display: "flex", justifyContent: "center", marginBottom: "16px", color: "var(--primary)" }}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="7" width="22" height="15" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="17"/><line x1="9.5" y1="14.5" x2="14.5" y2="14.5"/></svg>
               </div>
-              <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.3rem", color: "var(--white)", marginBottom: "12px" }}>Real Estate Agencies</h3>
+              <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.3rem", color: "var(--text-dark)", marginBottom: "12px" }}>Real Estate Agencies</h3>
               <p style={{ fontSize: ".88rem", color: "var(--text-muted)", lineHeight: 1.8 }}>Refer property owners and earn ongoing commission. Turn your property sales network into a passive income stream.</p>
               <Link to="/real-estate-agencies" style={{ display: "inline-block", marginTop: "20px", color: "var(--primary)", fontFamily: "'DM Sans',sans-serif", fontSize: ".85rem", fontWeight: 600, letterSpacing: ".06em" }}>Learn More →</Link>
             </div>
-            <div style={{ background: "rgba(143,179,194,.06)", border: "1px solid rgba(143,179,194,.2)", borderRadius: "24px", padding: "48px 32px", textAlign: "center", transition: "all .4s" }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(143,179,194,.15)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
+            <div style={{ background: "rgba(144,203,220,.06)", border: "1px solid rgba(144,203,220,.2)", borderRadius: "24px", padding: "48px 32px", textAlign: "center", transition: "all .4s" }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(144,203,220,.15)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
               <div style={{ display: "flex", justifyContent: "center", marginBottom: "16px", color: "var(--primary)" }}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"><path d="M5 17H3a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v3m3 7a5 5 0 1 1-10 0 5 5 0 0 1 10 0"/><polyline points="15.5 13.5 17 15 20 12"/></svg>
               </div>
-              <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.3rem", color: "var(--white)", marginBottom: "12px" }}>Travel Agencies</h3>
+              <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.3rem", color: "var(--text-dark)", marginBottom: "12px" }}>Travel Agencies</h3>
               <p style={{ fontSize: ".88rem", color: "var(--text-muted)", lineHeight: 1.8 }}>Bundle our luxury apartments into your RAK travel packages. Exclusive rates and white-label booking options available.</p>
               <Link to="/#contact" style={{ display: "inline-block", marginTop: "20px", color: "var(--primary)", fontFamily: "'DM Sans',sans-serif", fontSize: ".85rem", fontWeight: 600, letterSpacing: ".06em" }}>Learn More →</Link>
             </div>
-            <div style={{ background: "rgba(143,179,194,.06)", border: "1px solid rgba(143,179,194,.2)", borderRadius: "24px", padding: "48px 32px", textAlign: "center", transition: "all .4s" }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(143,179,194,.15)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
+            <div style={{ background: "rgba(144,203,220,.06)", border: "1px solid rgba(144,203,220,.2)", borderRadius: "24px", padding: "48px 32px", textAlign: "center", transition: "all .4s" }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(144,203,220,.15)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
               <div style={{ display: "flex", justifyContent: "center", marginBottom: "16px", color: "var(--primary)" }}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
               </div>
-              <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.3rem", color: "var(--white)", marginBottom: "12px" }}>Lifestyle Brands</h3>
+              <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.3rem", color: "var(--text-dark)", marginBottom: "12px" }}>Lifestyle Brands</h3>
               <p style={{ fontSize: ".88rem", color: "var(--text-muted)", lineHeight: 1.8 }}>Collaborate on co-branded experiences, campaigns, and influencer-led content that reaches high-net-worth audiences.</p>
               <Link to="/#contact" style={{ display: "inline-block", marginTop: "20px", color: "var(--primary)", fontFamily: "'DM Sans',sans-serif", fontSize: ".85rem", fontWeight: 600, letterSpacing: ".06em" }}>Learn More →</Link>
             </div>
@@ -130,26 +130,26 @@ export default function Partnerships() {
             <h2 className="section-title">Partnership Success Stories</h2>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "32px", marginTop: "48px" }}>
-            <div className="reveal reveal-delay-1" style={{ background: "rgba(255,255,255,.04)", border: "1px solid rgba(143,179,194,.12)", borderRadius: "20px", padding: "40px" }}>
+            <div className="reveal reveal-delay-1" style={{ background: "rgba(255,255,255,.88)", border: "1px solid rgba(144,203,220,.12)", borderRadius: "20px", padding: "40px" }}>
               <div style={{ color: "var(--primary)", fontSize: ".75rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", marginBottom: "16px" }}>Real Estate Agency · Dubai</div>
-              <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.3rem", color: "var(--white)", marginBottom: "12px" }}>Premium Properties Dubai</h3>
+              <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.3rem", color: "var(--text-dark)", marginBottom: "12px" }}>Premium Properties Dubai</h3>
               <p style={{ fontSize: ".9rem", color: "var(--text-muted)", lineHeight: 1.8, marginBottom: "20px" }}>"Partnering with HHH opened a completely new revenue stream for us. Within 6 months, we'd referred 12 property owners and were earning consistent monthly commissions. The process was incredibly smooth."</p>
               <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                <div style={{ width: "44px", height: "44px", background: "linear-gradient(135deg,#8FB3C2,#6E9AAA)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Playfair Display',serif", fontWeight: 700, color: "var(--white)" }}>R</div>
+                <div style={{ width: "44px", height: "44px", background: "linear-gradient(135deg,var(--primary),var(--primary-dark))", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Playfair Display',serif", fontWeight: 700, color: "var(--text-dark)" }}>R</div>
                 <div>
-                  <div style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 600, color: "var(--white)", fontSize: ".95rem" }}>Rania Al-Khalidi</div>
+                  <div style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 600, color: "var(--text-dark)", fontSize: ".95rem" }}>Rania Al-Khalidi</div>
                   <div style={{ fontSize: ".78rem", color: "var(--text-muted)" }}>Head of Partnerships, PPD</div>
                 </div>
               </div>
             </div>
-            <div className="reveal reveal-delay-2" style={{ background: "rgba(255,255,255,.04)", border: "1px solid rgba(143,179,194,.12)", borderRadius: "20px", padding: "40px" }}>
+            <div className="reveal reveal-delay-2" style={{ background: "rgba(255,255,255,.88)", border: "1px solid rgba(144,203,220,.12)", borderRadius: "20px", padding: "40px" }}>
               <div style={{ color: "var(--primary)", fontSize: ".75rem", fontWeight: 700, letterSpacing: ".18em", textTransform: "uppercase", marginBottom: "16px" }}>Travel Agency · London</div>
-              <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.3rem", color: "var(--white)", marginBottom: "12px" }}>Emerald Escapes</h3>
+              <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.3rem", color: "var(--text-dark)", marginBottom: "12px" }}>Emerald Escapes</h3>
               <p style={{ fontSize: ".9rem", color: "var(--text-muted)", lineHeight: 1.8, marginBottom: "20px" }}>"Our clients had been asking about Ras Al Khaimah for years. Partnering with HHH allowed us to offer genuinely luxury accommodation — the feedback has been phenomenal and repeat bookings are already flowing."</p>
               <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-                <div style={{ width: "44px", height: "44px", background: "linear-gradient(135deg,#8FB3C2,#6E9AAA)", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Playfair Display',serif", fontWeight: 700, color: "var(--white)" }}>J</div>
+                <div style={{ width: "44px", height: "44px", background: "linear-gradient(135deg,var(--primary),var(--primary-dark))", borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "'Playfair Display',serif", fontWeight: 700, color: "var(--text-dark)" }}>J</div>
                 <div>
-                  <div style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 600, color: "var(--white)", fontSize: ".95rem" }}>James Thornton</div>
+                  <div style={{ fontFamily: "'DM Sans',sans-serif", fontWeight: 600, color: "var(--text-dark)", fontSize: ".95rem" }}>James Thornton</div>
                   <div style={{ fontSize: ".78rem", color: "var(--text-muted)" }}>Director, Emerald Escapes</div>
                 </div>
               </div>

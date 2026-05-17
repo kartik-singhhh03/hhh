@@ -58,8 +58,8 @@ export default function PartnershipAgreements() {
   return (
     <main>
       {/* PAGE HERO */}
-      <div className="page-hero" style={{ height: "45vh", minHeight: "360px" }}>
-        <div className="page-hero-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=1600&q=80')" }}></div>
+      <div className="page-hero">
+        <div className="page-hero-bg" style={{ backgroundImage: "url('/image-6.webp')" }}></div>
         <div className="page-hero-overlay"></div>
         <div className="container">
           <div className="section-label">Partnership Agreements</div>
@@ -84,8 +84,8 @@ export default function PartnershipAgreements() {
                 Our legal team reviews every agreement annually to ensure compliance with RAK and UAE law. Partners are always encouraged to seek independent legal advice before signing.
               </p>
             </div>
-            <div style={{ background: "rgba(255,255,255,.04)", border: "1px solid rgba(143,179,194,.15)", borderRadius: "20px", padding: "40px" }}>
-              <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.2rem", color: "var(--white)", marginBottom: "24px" }}>Agreement Highlights</h3>
+            <div style={{ background: "rgba(255,255,255,.88)", border: "1px solid rgba(144,203,220,.15)", borderRadius: "20px", padding: "40px" }}>
+              <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.2rem", color: "var(--text-dark)", marginBottom: "24px" }}>Agreement Highlights</h3>
               <div style={{ display: "flex", flexDirection: "column", gap: "12px" }}>
                 <div style={{ display: "flex", alignItems: "flex-start", gap: "12px" }}>
                   <span style={{ color: "var(--primary)", fontSize: "1.1rem", flexShrink: 0, marginTop: "2px" }}>✓</span>
@@ -129,7 +129,7 @@ export default function PartnershipAgreements() {
           </div>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "32px" }} className="reveal">
-            <div style={{ background: "rgba(143,179,194,.06)", border: "1px solid rgba(143,179,194,.2)", borderRadius: "20px", padding: "40px" }}>
+            <div style={{ background: "rgba(144,203,220,.06)", border: "1px solid rgba(144,203,220,.2)", borderRadius: "20px", padding: "40px" }}>
               <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.3rem", color: "var(--primary)", marginBottom: "24px" }}>Holiday Home Host Commits To:</h3>
               <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
                 <div style={{ display: "flex", alignItems: "flex-start", gap: "12px", fontSize: ".88rem", color: "var(--text-light)" }}>
@@ -156,8 +156,8 @@ export default function PartnershipAgreements() {
               </div>
             </div>
 
-            <div style={{ background: "rgba(255,255,255,.04)", border: "1px solid rgba(143,179,194,.12)", borderRadius: "20px", padding: "40px" }}>
-              <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.3rem", color: "var(--white)", marginBottom: "24px" }}>The Partner Commits To:</h3>
+            <div style={{ background: "rgba(255,255,255,.88)", border: "1px solid rgba(144,203,220,.12)", borderRadius: "20px", padding: "40px" }}>
+              <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.3rem", color: "var(--text-dark)", marginBottom: "24px" }}>The Partner Commits To:</h3>
               <div style={{ display: "flex", flexDirection: "column", gap: "14px" }}>
                 <div style={{ display: "flex", alignItems: "flex-start", gap: "12px", fontSize: ".88rem", color: "var(--text-light)" }}>
                   <span style={{ color: "var(--primary)", flexShrink: 0 }}>→</span> Ensuring the property is in good condition at handover

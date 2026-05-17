@@ -29,13 +29,13 @@ export default function Commission() {
         <div className="fee-hero-bg-blob fee-hero-bg-blob-1"></div>
         <div className="fee-hero-bg-blob fee-hero-bg-blob-2"></div>
         <div className="container" style={{ position: "relative", zIndex: 1 }}>
-          <div className="section-label" style={{ justifyContent: "center", color: "rgba(255,255,255,.6)", marginBottom: "24px" }}>
+          <div className="section-label" style={{ justifyContent: "center", color: "var(--primary-dark)", marginBottom: "24px" }}>
             Commission Structure
           </div>
-          <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(2rem,4vw,3rem)", fontWeight: 700, color: "var(--white)", marginBottom: "16px", lineHeight: 1.15 }}>
+          <h1 style={{ fontFamily: "var(--font-serif)", fontSize: "clamp(2rem,4vw,3rem)", fontWeight: 700, color: "var(--text-dark)", marginBottom: "16px", lineHeight: 1.15 }}>
             HHH Commission Structure
           </h1>
-          <p style={{ fontSize: "1rem", color: "rgba(255,255,255,.65)", marginBottom: 0, fontFamily: "var(--font-ui)", letterSpacing: ".08em", textTransform: "uppercase", fontWeight: 600 }}>
+          <p style={{ fontSize: "1rem", color: "var(--text-body)", marginBottom: 0, fontFamily: "var(--font-ui)", letterSpacing: ".08em", textTransform: "uppercase", fontWeight: 600 }}>
             Transparent &amp; Competitive Fee Model
           </p>
           <div className="fee-display">

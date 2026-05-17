@@ -1,11 +1,44 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from "react";
 
 const galleryImages = [
-  { index: 0, src: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=800&q=80', alt: 'Sea view', className: 'tall reveal reveal-delay-1' },
-  { index: 1, src: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80', alt: 'Interior', className: 'reveal reveal-delay-2' },
-  { index: 2, src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80', alt: 'Jebel Jais', className: 'reveal reveal-delay-3' },
-  { index: 3, src: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800&q=80', alt: 'Beach', className: 'wide reveal reveal-delay-2' },
-  { index: 4, src: 'https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=800&q=80', alt: 'Bedroom', className: 'reveal reveal-delay-4' }
+  {
+    index: 0,
+    src: "/image-10.webp",
+    alt: "Bright Pacific apartment bedroom",
+    className: "tall reveal reveal-delay-1",
+  },
+  {
+    index: 1,
+    src: "/image-12.webp",
+    alt: "Bright Pacific apartment living and dining area",
+    className: "reveal reveal-delay-2",
+  },
+  {
+    index: 2,
+    src: "/image-7.webp",
+    alt: "Bay Residences pool and apartment towers",
+    className: "reveal reveal-delay-3",
+  },
+  {
+    index: 3,
+    src: "/pacific-apt-16.webp",
+    alt: "Hayat Island beach near Pacific apartments",
+    className: "wide reveal reveal-delay-2",
+  },
+  {
+    index: 4,
+    src: "/image-9.webp",
+    alt: "Bright Pacific apartment bedroom detail",
+    className: "reveal reveal-delay-4",
+  },
+];
+
+const stripImages = [
+  "/pacific-apt-1.webp",
+  "/pacific-apt-3.webp",
+  "/image-15.webp",
+  "/image-19.webp",
+  "/image-5.webp",
 ];
 
 export default function Gallery() {
@@ -15,12 +48,12 @@ export default function Gallery() {
   const openLightbox = (idx) => {
     setCurrentIdx(idx);
     setLightboxOpen(true);
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = "hidden";
   };
 
   const closeLightbox = () => {
     setLightboxOpen(false);
-    document.body.style.overflow = '';
+    document.body.style.overflow = "";
   };
 
   const nextImg = (e) => {
@@ -36,52 +69,66 @@ export default function Gallery() {
   useEffect(() => {
     const handleKeyDown = (e) => {
       if (!lightboxOpen) return;
-      if (e.key === 'Escape') closeLightbox();
-      if (e.key === 'ArrowLeft') prevImg();
-      if (e.key === 'ArrowRight') nextImg();
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") prevImg();
+      if (e.key === "ArrowRight") nextImg();
     };
-    document.addEventListener('keydown', handleKeyDown);
-    return () => document.removeEventListener('keydown', handleKeyDown);
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
   }, [lightboxOpen]);
 
   return (
     <section className="gallery-section" id="gallery">
       <div className="container">
-        <div className="reveal" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '16px' }}>
+        <div
+          className="reveal"
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "flex-end",
+            flexWrap: "wrap",
+            gap: "16px",
+          }}
+        >
           <div>
             <div className="section-label">Gallery</div>
             <h2 className="section-title">A Glimpse of Paradise</h2>
           </div>
-          <a href="#" className="btn-outline" style={{ marginBottom: '4px' }}>View Full Gallery</a>
+          <a href="#" className="btn-outline" style={{ marginBottom: "4px" }}>
+            View Full Gallery
+          </a>
         </div>
-        
+
         <div className="gallery-grid" id="galleryGrid">
           {galleryImages.map((img) => (
-            <div key={img.index} className={`gallery-item ${img.className}`} data-index={img.index} onClick={() => openLightbox(img.index)}>
+            <div
+              key={img.index}
+              className={`gallery-item ${img.className}`}
+              data-index={img.index}
+              onClick={() => openLightbox(img.index)}
+            >
               <img src={img.src} alt={img.alt} loading="lazy" />
-              <div className="gallery-overlay"><span className="material-symbols-outlined">open_in_full</span></div>
+              <div className="gallery-overlay">
+                <span className="material-symbols-outlined">open_in_full</span>
+              </div>
             </div>
           ))}
         </div>
-        
+
         <div className="gallery-strip reveal">
-          <div className="strip-track" id="stripTrack" 
-               onMouseEnter={(e) => e.currentTarget.style.animationPlayState = 'paused'}
-               onMouseLeave={(e) => e.currentTarget.style.animationPlayState = 'running'}>
-            {[
-              '1582719478250-c89cae4dc85b', '1600596542815-ffad4c1539a9', '1464822759023-fed622ff2c3b',
-              '1506905925346-21bda4d32df4', '1560448204-e02f11c3d0e2', '1571896349842-33c89424de2d'
-            ].map((id, i) => (
-              <div key={`s1-${i}`} className="strip-item">
-                <img src={`https://images.unsplash.com/photo-${id}?w=400&q=75`} alt="" loading="lazy" />
-              </div>
-            ))}
-            {[
-              '1582719478250-c89cae4dc85b', '1600596542815-ffad4c1539a9', '1464822759023-fed622ff2c3b',
-              '1506905925346-21bda4d32df4', '1560448204-e02f11c3d0e2', '1571896349842-33c89424de2d'
-            ].map((id, i) => (
-              <div key={`s2-${i}`} className="strip-item">
-                <img src={`https://images.unsplash.com/photo-${id}?w=400&q=75`} alt="" loading="lazy" />
+          <div
+            className="strip-track"
+            id="stripTrack"
+            onMouseEnter={(e) => {
+              e.currentTarget.style.animationPlayState = "paused";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.animationPlayState = "running";
+            }}
+          >
+            {[...stripImages, ...stripImages].map((src, i) => (
+              <div key={`${src}-${i}`} className="strip-item">
+                <img src={src} alt="" loading="lazy" />
               </div>
             ))}
           </div>
@@ -89,12 +136,35 @@ export default function Gallery() {
       </div>
 
       {lightboxOpen && (
-        <div className="lightbox active" id="lightbox" role="dialog" aria-modal="true" onClick={closeLightbox}>
-          <button className="lightbox-close" id="lightboxClose" onClick={(e) => { e.stopPropagation(); closeLightbox(); }}>✕</button>
-          <button className="lightbox-nav lightbox-prev" id="lightboxPrev" onClick={prevImg}>&#8592;</button>
-          {/* using simple transition approach */}
-          <img src={galleryImages[currentIdx].src} alt={galleryImages[currentIdx].alt} id="lightboxImg" onClick={(e) => e.stopPropagation()} style={{ opacity: 1, transform: 'scale(1)', transition: 'opacity .35s ease, transform .35s ease' }} />
-          <button className="lightbox-nav lightbox-next" id="lightboxNext" onClick={nextImg}>&#8594;</button>
+        <div
+          className="lightbox active"
+          id="lightbox"
+          role="dialog"
+          aria-modal="true"
+          onClick={closeLightbox}
+        >
+          <button
+            className="lightbox-close"
+            id="lightboxClose"
+            onClick={(e) => {
+              e.stopPropagation();
+              closeLightbox();
+            }}
+          >
+            &times;
+          </button>
+          <button className="lightbox-nav lightbox-prev" id="lightboxPrev" onClick={prevImg}>
+            &#8592;
+          </button>
+          <img
+            src={galleryImages[currentIdx].src}
+            alt={galleryImages[currentIdx].alt}
+            id="lightboxImg"
+            onClick={(e) => e.stopPropagation()}
+          />
+          <button className="lightbox-nav lightbox-next" id="lightboxNext" onClick={nextImg}>
+            &#8594;
+          </button>
         </div>
       )}
     </section>

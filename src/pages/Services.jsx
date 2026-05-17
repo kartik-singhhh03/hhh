@@ -26,7 +26,7 @@ export default function Services() {
     <main>
       {/* PAGE HERO */}
       <div className="page-hero">
-        <div className="page-hero-bg" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1600&q=80')" }}></div>
+        <div className="page-hero-bg" style={{ backgroundImage: "url('/image-15.webp')" }}></div>
         <div className="page-hero-overlay"></div>
         <div className="container">
           <div className="section-label">Our Services</div>

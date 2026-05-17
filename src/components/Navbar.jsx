@@ -21,8 +21,11 @@ export default function Navbar() {
       id="mainNav"
     >
       <Link to="/" className="nav-logo" onClick={closeMenu}>
-        <span className="logo-main">HHH</span>
-        <span className="logo-sub">Holiday Home Host</span>
+        <img
+          src="/hhh-black.webp"
+          alt="Holiday Home Host"
+          className="brand-logo-img"
+        />
       </Link>
       <ul className="nav-links" id="navLinks">
         <li>
@@ -56,24 +59,13 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/partnerships" onClick={closeMenu}>
-            Partnerships
-          </Link>
-        </li>
-        <li>
-          <a
-            href="#contact"
+          <Link
+            to="/property-owners"
             className="nav-cta"
-            onClick={(e) => {
-              e.preventDefault();
-              closeMenu();
-              document
-                .getElementById("contact")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
+            onClick={closeMenu}
           >
             List Your Property
-          </a>
+          </Link>
         </li>
       </ul>
       <button
