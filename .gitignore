@@ -1,5 +1,10 @@
 # Dependencies
 node_modules/
+node_modules
+npm-shrinkwrap.json
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 
 # Vite build output
 dist/
@@ -23,3 +28,23 @@ yarn-error.log*
 
 # Vercel
 .vercel/
+
+# Legacy HTML files (no longer used in React)
+about.html
+commission.html
+listing-process.html
+LODGIFY-*.html
+partnership-agreements.html
+partnerships.html
+property-owners.html
+real-estate-agencies.html
+roi-calculator.html
+services.html
+index_static.html
+
+# Legacy scripts and configs (no longer needed)
+script.js
+style.css
+copy_assets.py
+setup-assets.bat
+
