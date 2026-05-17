@@ -1,7 +1,17 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
+
+const navItems = [
+  { to: "/", label: "Home", end: true },
+  { to: "/about", label: "About" },
+  { to: "/property-owners", label: "For Owners" },
+  { to: "/services", label: "Services" },
+  { to: "/commission", label: "Commission" },
+  { to: "/how-it-works", label: "How It Works" },
+];
 
 export default function Navbar() {
+  const location = useLocation();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -13,14 +23,42 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    setMenuOpen(false);
+  }, [location.pathname, location.hash]);
+
+  useEffect(() => {
+    const closeOnEscape = (event) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, []);
+
   const closeMenu = () => setMenuOpen(false);
+  const linkClassName = ({ isActive }) => (isActive ? "active" : undefined);
+
+  const handleLogoClick = (event) => {
+    closeMenu();
+
+    if (location.pathname === "/") {
+      event.preventDefault();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
 
   return (
     <nav
       className={`nav ${scrolled ? "scrolled" : ""} ${menuOpen ? "menu-open" : ""}`}
       id="mainNav"
     >
-      <Link to="/" className="nav-logo" onClick={closeMenu}>
+      <Link
+        to="/"
+        className="nav-logo"
+        onClick={handleLogoClick}
+        aria-label="Holiday Home Host home"
+      >
         <img
           src="/hhh-black.webp"
           alt="Holiday Home Host"
@@ -28,44 +66,26 @@ export default function Navbar() {
         />
       </Link>
       <ul className="nav-links" id="navLinks">
+        {navItems.map((item) => (
+          <li key={item.to}>
+            <NavLink
+              to={item.to}
+              end={item.end}
+              className={linkClassName}
+              onClick={closeMenu}
+            >
+              {item.label}
+            </NavLink>
+          </li>
+        ))}
         <li>
-          <Link to="/" onClick={closeMenu}>
-            Home
-          </Link>
-        </li>
-        <li>
-          <Link to="/about" onClick={closeMenu}>
-            About
-          </Link>
-        </li>
-        <li>
-          <Link to="/property-owners" onClick={closeMenu}>
-            For Owners
-          </Link>
-        </li>
-        <li>
-          <Link to="/services" onClick={closeMenu}>
-            Services
-          </Link>
-        </li>
-        <li>
-          <Link to="/commission" onClick={closeMenu}>
-            Commission
-          </Link>
-        </li>
-        <li>
-          <Link to="/how-it-works" onClick={closeMenu}>
-            How It Works
-          </Link>
-        </li>
-        <li>
-          <Link
+          <NavLink
             to="/property-owners"
-            className="nav-cta"
+            className={({ isActive }) => `nav-cta ${isActive ? "active" : ""}`}
             onClick={closeMenu}
           >
             List Your Property
-          </Link>
+          </NavLink>
         </li>
       </ul>
       <button

@@ -70,6 +70,11 @@ const SEO_BY_PATH = {
   },
 };
 
+function getNavOffset() {
+  const nav = document.getElementById("mainNav");
+  return nav ? nav.getBoundingClientRect().height + 14 : 92;
+}
+
 function updateMeta(name, content, property = false) {
   const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
   let tag = document.head.querySelector(selector);
@@ -134,11 +139,19 @@ export default function App() {
   }, [location.pathname]);
 
   useEffect(() => {
-    if (!location.hash) return;
+    if (!location.hash) {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+      return;
+    }
 
     const id = location.hash.replace("#", "");
     window.setTimeout(() => {
-      document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+      const target = document.getElementById(id);
+      if (!target) return;
+
+      const top =
+        target.getBoundingClientRect().top + window.scrollY - getNavOffset();
+      window.scrollTo({ top, behavior: "smooth" });
     }, 80);
   }, [location]);
 

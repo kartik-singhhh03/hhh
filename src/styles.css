@@ -101,12 +101,13 @@
 
 /* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html  { scroll-behavior: smooth; font-size: 16px; }
+html  { scroll-behavior: smooth; scroll-padding-top: 92px; font-size: 16px; }
 body  { font-family: var(--font-sans); background: var(--bg-main); color: var(--text-body); overflow-x: hidden; line-height: 1.75; }
 img   { max-width: 100%; display: block; }
 a     { text-decoration: none; color: inherit; }
 ul    { list-style: none; }
 button{ cursor: pointer; border: none; outline: none; font-family: var(--font-ui); }
+[id] { scroll-margin-top: 92px; }
 
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: var(--bg-soft); }
@@ -265,8 +266,8 @@ section { padding: 100px 0; }
 .nav {
   position: fixed; top: 0; left: 0; right: 0;
   z-index: 1000;
-  min-height: 104px;
-  padding: 12px clamp(24px, 3vw, 48px);
+  min-height: 82px;
+  padding: 8px clamp(24px, 3vw, 48px);
   display: flex; align-items: center; justify-content: space-between;
   transition: var(--transition);
   background: rgba(255,255,255,.96);
@@ -277,8 +278,8 @@ section { padding: 100px 0; }
   background: rgba(255,255,255,.96);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  min-height: 88px;
-  padding: 8px clamp(24px, 3vw, 48px);
+  min-height: 72px;
+  padding: 6px clamp(24px, 3vw, 48px);
   border-bottom: 1px solid var(--border);
   box-shadow: 0 4px 24px rgba(144,203,220,0.16);
 }
@@ -286,14 +287,15 @@ section { padding: 100px 0; }
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 104px;
-  height: 78px;
+  width: 120px;
+  height: 70px;
   line-height: 1;
   flex-shrink: 0;
 }
 .brand-logo-img {
-  width: 78px;
-  height: 78px;
+  width: 100px;
+  height: auto;
+  max-height: 64px;
   object-fit: contain;
   border-radius: 0;
   background: transparent;
@@ -315,9 +317,9 @@ section { padding: 100px 0; }
 }
 .nav.scrolled .logo-sub { color: var(--primary-dark); }
 
-.nav-links { display: flex; align-items: center; gap: clamp(18px, 2vw, 32px); }
+.nav-links { display: flex; align-items: center; gap: clamp(16px, 1.8vw, 30px); }
 .nav-links a {
-  font-family: var(--font-ui); font-size: .85rem; font-weight: 500;
+  font-family: var(--font-ui); font-size: .84rem; font-weight: 500;
   color: var(--text-dark);
   transition: color .25s;
   position: relative;
@@ -328,21 +330,24 @@ section { padding: 100px 0; }
   background: var(--primary-dark); transform: scaleX(0); transform-origin: left;
   transition: transform .3s ease;
 }
-.nav-links a:not(.nav-cta):hover::after { transform: scaleX(1); }
-.nav-links a:not(.nav-cta):hover { color: var(--primary-dark); }
+.nav-links a:not(.nav-cta):hover::after,
+.nav-links a.active:not(.nav-cta)::after { transform: scaleX(1); }
+.nav-links a:not(.nav-cta):hover,
+.nav-links a.active:not(.nav-cta) { color: var(--primary-dark); }
 .nav.scrolled .nav-links a:not(.nav-cta):hover { color: var(--primary-dark); }
 
 .nav-cta {
   background: var(--primary-dark);
   color: var(--text-dark) !important;
-  padding: 10px 24px;
+  padding: 9px 22px;
   border-radius: var(--radius-xl);
   font-weight: 600 !important;
   transition: var(--transition) !important;
   box-shadow: 0 8px 22px rgba(144,203,220,0.32);
   white-space: nowrap;
 }
-.nav-cta:hover { background: #A8DCE8 !important; transform: translateY(-1px); }
+.nav-cta:hover,
+.nav-cta.active { background: #A8DCE8 !important; transform: translateY(-1px); }
 .nav-cta::after { display: none !important; }
 
 .nav-hamburger {
@@ -1033,15 +1038,17 @@ input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 20p
   .review-card { flex: 0 0 calc(50% - 16px); }
 }
 @media (max-width: 768px) {
-  .nav { min-height: 86px; padding: 10px 20px; }
-  .nav.scrolled { min-height: 78px; padding: 8px 20px; }
+  html { scroll-padding-top: 82px; }
+  [id] { scroll-margin-top: 82px; }
+  .nav { min-height: 74px; padding: 8px 18px; }
+  .nav.scrolled { min-height: 68px; padding: 7px 18px; }
   .nav-logo {
-    width: 76px;
-    height: 62px;
+    width: 72px;
+    height: 52px;
   }
   .brand-logo-img {
-    width: 62px;
-    height: 62px;
+    width: 68px;
+    height: 50px;
   }
   .container { padding: 0 20px; }
   .footer { padding: 48px 20px; }
