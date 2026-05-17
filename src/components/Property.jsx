@@ -1,79 +1,100 @@
+import { useNavigate } from "react-router-dom";
+import { featuredProperties } from "../data/featuredProperties";
+
+function PropertyCard({ property }) {
+  const navigate = useNavigate();
+
+  const handleCheckAvailability = (e) => {
+    e.preventDefault();
+    document
+      .getElementById("lodgify-booking")
+      ?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  const handleKnowMore = (e) => {
+    e.preventDefault();
+    navigate(`/properties/${property.slug}`);
+  };
+
+  return (
+    <div className="property-wrap">
+      <div className="property-image-wrap reveal reveal-delay-1">
+        <img
+          src={property.image}
+          alt={property.title}
+          loading="lazy"
+        />
+        <span className="property-badge">{property.badge}</span>
+        <div className="property-price-tag">
+          <div className="price">{property.price}</div>
+          <div className="per">{property.priceLabel}</div>
+        </div>
+      </div>
+
+      <div className="property-info reveal reveal-delay-2">
+        <div className="section-label">Featured Property</div>
+        <h2>{property.title}</h2>
+        <div className="property-location">
+          <span className="material-symbols-outlined">place</span>
+          {property.location}
+        </div>
+        <div className="property-specs">
+          <div className="spec-item">
+            <span className="material-symbols-outlined">group</span>
+            <span className="spec-label">Guests</span>
+            <span className="spec-value">{property.guests}</span>
+          </div>
+          <div className="spec-item">
+            <span className="material-symbols-outlined">king_bed</span>
+            <span className="spec-label">Bedrooms</span>
+            <span className="spec-value">{property.bedrooms}</span>
+          </div>
+          <div className="spec-item">
+            <span className="material-symbols-outlined">shower</span>
+            <span className="spec-label">Bathrooms</span>
+            <span className="spec-value">{property.bathrooms}</span>
+          </div>
+          <div className="spec-item">
+            <span className="material-symbols-outlined">straighten</span>
+            <span className="spec-label">Area</span>
+            <span className="spec-value">{property.area}</span>
+          </div>
+        </div>
+        <p className="property-desc">{property.shortDescription}</p>
+        <div className="property-buttons">
+          <a
+            href="#lodgify-booking"
+            className="btn-primary-dark"
+            onClick={handleCheckAvailability}
+          >
+            <span className="material-symbols-outlined">date_range</span>
+            {property.buttonText}
+          </a>
+          <a
+            href={`/properties/${property.slug}`}
+            className="btn-outline"
+            onClick={handleKnowMore}
+          >
+            <span className="material-symbols-outlined">info</span>
+            Know More
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function Property() {
   return (
     <section className="property-section" id="property">
       <div className="container">
         <div className="reveal">
-          <div className="section-label">Featured Property</div>
+          <div className="section-label">Featured Properties</div>
         </div>
-        <div className="property-wrap">
-          <div className="property-image-wrap reveal reveal-delay-1">
-            <img
-              src="/pacific-apt-4.webp"
-              alt="Pacific apartment bedroom with sea view"
-              loading="lazy"
-            />
-            <span className="property-badge">
-              Sea View &middot; Hayat Island
-            </span>
-            <div className="property-price-tag">
-              <div className="price">AED 650</div>
-              <div className="per">per night</div>
-            </div>
-          </div>
-          <div className="property-info reveal reveal-delay-2">
-            <div className="section-label">Featured Property</div>
-            <h2>
-              Luxury Sea View
-              <br />
-              Apartment, Hayat Island
-            </h2>
-            <div className="property-location">
-              <span className="material-symbols-outlined">place</span>
-              Hayat Island, Mina Al Arab, Ras Al Khaimah
-            </div>
-            <div className="property-specs">
-              <div className="spec-item">
-                <span className="material-symbols-outlined">group</span>
-                <span className="spec-label">Guests</span>
-                <span className="spec-value">2&ndash;4</span>
-              </div>
-              <div className="spec-item">
-                <span className="material-symbols-outlined">king_bed</span>
-                <span className="spec-label">Bedrooms</span>
-                <span className="spec-value">1</span>
-              </div>
-              <div className="spec-item">
-                <span className="material-symbols-outlined">shower</span>
-                <span className="spec-label">Bathrooms</span>
-                <span className="spec-value">2</span>
-              </div>
-              <div className="spec-item">
-                <span className="material-symbols-outlined">straighten</span>
-                <span className="spec-label">Area</span>
-                <span className="spec-value">850 ft&sup2;</span>
-              </div>
-            </div>
-            <p className="property-desc">
-              Wake up to panoramic Arabian Gulf views from this exquisitely
-              appointed apartment on Hayat Island. Floor-to-ceiling windows, an
-              expansive wrap-around balcony, fully equipped kitchen, and access
-              to world-class resort amenities.
-            </p>
-            <a
-              href="#lodgify-booking"
-              className="btn-primary-dark"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("lodgify-booking")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              <span className="material-symbols-outlined">date_range</span>
-              Check Availability
-            </a>
-          </div>
-        </div>
+
+        {featuredProperties.map((property, index) => (
+          <PropertyCard key={property.id} property={property} />
+        ))}
       </div>
     </section>
   );

@@ -16,6 +16,7 @@ import RoiCalculator from "./pages/RoiCalculator";
 import Partnerships from "./pages/Partnerships";
 import PartnershipAgreements from "./pages/PartnershipAgreements";
 import RealEstateAgencies from "./pages/RealEstateAgencies";
+import PropertyDetails from "./pages/PropertyDetails";
 
 const SEO_BY_PATH = {
   "/": {
@@ -68,6 +69,11 @@ const SEO_BY_PATH = {
     description:
       "Referral and partnership opportunities for real estate agencies with Holiday Home Host in Ras Al Khaimah.",
   },
+  "/properties": {
+    title: "Property Details | Holiday Home Host",
+    description:
+      "Explore detailed information about our premium holiday home listings in Ras Al Khaimah including amenities, house rules, and availability.",
+  },
 };
 
 function getNavOffset() {
@@ -118,7 +124,10 @@ export default function App() {
   }, [location.pathname]);
 
   useEffect(() => {
-    const seo = SEO_BY_PATH[location.pathname] ?? SEO_BY_PATH["/"];
+    const pathKey = location.pathname.startsWith("/properties/")
+      ? "/properties"
+      : location.pathname;
+    const seo = SEO_BY_PATH[pathKey] ?? SEO_BY_PATH["/"];
     const canonicalUrl = `https://www.holidayhomehost.ae${location.pathname}`;
 
     document.title = seo.title;
@@ -179,6 +188,7 @@ export default function App() {
         <Route path="/partnerships" element={<Partnerships />} />
         <Route path="/partnership-agreements" element={<PartnershipAgreements />} />
         <Route path="/real-estate-agencies" element={<RealEstateAgencies />} />
+        <Route path="/properties/:slug" element={<PropertyDetails />} />
       </Routes>
 
       <Footer />
