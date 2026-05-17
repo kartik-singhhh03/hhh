@@ -46,12 +46,7 @@ export default defineConfig({
 
   build: {
     target: "esnext",
-    minify: "terser",
-    terserOptions: {
-      compress: {
-        drop_console: true,
-      },
-    },
+    minify: "esbuild",
     // Raise the chunk-size warning threshold to 600kb
     chunkSizeWarningLimit: 600,
     cssCodeSplit: true,
