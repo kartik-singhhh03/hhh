@@ -19,7 +19,7 @@ export const featuredProperties = [
     priceLabel: "per night",
     shortDescription:
       "Luxury 1BR apartment in the newly completed Bay Residences (2026) on Hayat Island, Mina Al Arab. Prime beachfront location with private beach access, infinity pools, and a sea-view balcony offering a five-star resort atmosphere.",
-    image: "/image-1.webp",
+    image: "/image-3.webp",
     buttonText: "Check Availability",
     fullData: {
       images: [
@@ -136,7 +136,7 @@ export const featuredProperties = [
     priceLabel: "per night",
     shortDescription:
       "Luxury 2-bedroom apartment in Pacific, Al Marjan Island with direct beach access, swimming pools, and private balcony overlooking serene sea views. Ideal for families and groups seeking a premium coastal stay.",
-    image: "/pacific-apt-2.webp",
+    image: "/pacific-apt-10.webp",
     buttonText: "Check Availability",
     fullData: {
       images: [
