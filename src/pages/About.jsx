@@ -122,7 +122,7 @@ export default function About() {
                 <span className="label">Founded</span>
               </div>
               <div className="story-img-main">
-                <img src="/image-12.webp" alt="Bright Bay Residences apartment living room managed by Holiday Home Host" loading="lazy" />
+                <img src="/hhh_img.jpeg" alt="Bright Bay Residences apartment living room managed by Holiday Home Host" loading="lazy" />
               </div>
               <div className="story-img-float">
                 <img src="/image-5.webp" alt="Bay Residences balcony with sea view" loading="lazy" />
