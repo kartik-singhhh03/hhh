@@ -136,7 +136,7 @@ export const featuredProperties = [
     priceLabel: "per night",
     shortDescription:
       "Luxury 2-bedroom apartment in Pacific, Al Marjan Island with direct beach access, swimming pools, and private balcony overlooking serene sea views. Ideal for families and groups seeking a premium coastal stay.",
-    image: "/pacific-apt-10.webp",
+    image: "/pacific-apt-16.webp",
     buttonText: "Check Availability",
     fullData: {
       images: [

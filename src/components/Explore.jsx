@@ -5,7 +5,7 @@ const HAYAT_CARDS = [
     tag: "Beachfront",
     title: "Hayat Island Beach",
     desc: "Clear coastal water and soft sand within easy reach of the apartment.",
-    image: "/image-6.webp",
+    image: "/beach_hayat.jpeg",
     alt: "Bay Residences pool and sea view on Hayat Island",
   },
   {
