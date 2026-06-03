@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from "react";
 import { Link, NavLink, useLocation } from "react-router-dom";
-import { featuredProperties } from "../data/featuredProperties";
+import { useProperties } from "../context/PropertiesProvider";
+import { getPropertyRoutePath } from "../lib/propertiesApi";
 
 const navItems = [
   { to: "/", label: "Home", end: true },
@@ -13,6 +14,7 @@ const navItems = [
 
 export default function Navbar() {
   const location = useLocation();
+  const { properties } = useProperties();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -69,7 +71,9 @@ export default function Navbar() {
   };
 
   // Check if any property page is active
-  const isPropertiesActive = location.pathname.startsWith("/properties/");
+  const isPropertiesActive =
+    location.pathname.startsWith("/property/") ||
+    location.pathname.startsWith("/properties/");
 
   return (
     <nav
@@ -136,10 +140,10 @@ export default function Navbar() {
             role="menu"
           >
             <div className="nav-dropdown-header">Our Properties</div>
-            {featuredProperties.map((prop) => (
+            {properties.map((prop) => (
               <Link
-                key={prop.id}
-                to={`/properties/${prop.slug}`}
+                key={prop.lodgifyId ?? prop.id}
+                to={getPropertyRoutePath(prop)}
                 className="nav-dropdown-item"
                 onClick={closeMenu}
                 role="menuitem"

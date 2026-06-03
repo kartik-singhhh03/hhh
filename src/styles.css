@@ -2,7 +2,6 @@
    HOLIDAY HOME HOST — DESIGN SYSTEM v2
    Palette: #FFFFFF · #90CBDC · #BFE8F1 · #F4E9D7 · #FBF8F2
    ============================================================ */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Inter:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
   --primary:       #BFE8F1;
@@ -53,6 +52,8 @@
 
 /* The .hhh-fw wrapper: add this div around any section HTML */
 .hhh-fw {
+  position: relative;
+  z-index: 1;
   width: 100% !important;
   max-width: 100% !important;
   margin-left:  0 !important;
@@ -582,9 +583,9 @@ section { padding: 100px 0; }
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background-image: url('/image-7.webp'),
-    linear-gradient(135deg, #1C3240 0%, #2E5470 50%, #1C3240 100%);
-  background-size: cover; background-position: center;
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: center;
+  background: linear-gradient(135deg, #1C3240 0%, #2E5470 50%, #1C3240 100%);
   transform: scale(1.07);
   animation: heroZoom 14s ease-out forwards;
   will-change: transform;

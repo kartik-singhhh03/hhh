@@ -1,23 +1,25 @@
-import { useEffect } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import LodgifySearchBar from "./components/LodgifySearchBar";
 import Sections from "./components/Sections";
 import Footer from "./components/Footer";
+import { useProperties } from "./context/PropertiesProvider";
+import { applySeo, buildPropertySeo } from "./lib/seo";
 
-// Pages
-import About from "./pages/About";
-import PropertyOwners from "./pages/PropertyOwners";
-import Services from "./pages/Services";
-import Commission from "./pages/Commission";
-import HowItWorks from "./pages/HowItWorks";
-import RoiCalculator from "./pages/RoiCalculator";
-import Partnerships from "./pages/Partnerships";
-import PartnershipAgreements from "./pages/PartnershipAgreements";
-import RealEstateAgencies from "./pages/RealEstateAgencies";
-import PropertyDetails from "./pages/PropertyDetails";
-import GalleryPage from "./pages/GalleryPage";
+const About = lazy(() => import("./pages/About"));
+const PropertyOwners = lazy(() => import("./pages/PropertyOwners"));
+const Services = lazy(() => import("./pages/Services"));
+const Commission = lazy(() => import("./pages/Commission"));
+const HowItWorks = lazy(() => import("./pages/HowItWorks"));
+const RoiCalculator = lazy(() => import("./pages/RoiCalculator"));
+const Partnerships = lazy(() => import("./pages/Partnerships"));
+const PartnershipAgreements = lazy(() => import("./pages/PartnershipAgreements"));
+const RealEstateAgencies = lazy(() => import("./pages/RealEstateAgencies"));
+const PropertyDetails = lazy(() => import("./pages/PropertyDetails"));
+const PropertySlugRedirect = lazy(() => import("./pages/PropertySlugRedirect"));
+const GalleryPage = lazy(() => import("./pages/GalleryPage"));
 
 const SEO_BY_PATH = {
   "/": {
@@ -70,11 +72,6 @@ const SEO_BY_PATH = {
     description:
       "Referral and partnership opportunities for real estate agencies with Holiday Home Host in Ras Al Khaimah.",
   },
-  "/properties": {
-    title: "Property Details | Holiday Home Host",
-    description:
-      "Explore detailed information about our premium holiday home listings in Ras Al Khaimah including amenities, house rules, and availability.",
-  },
   "/gallery": {
     title: "Property Gallery | Holiday Home Host",
     description:
@@ -87,21 +84,9 @@ function getNavOffset() {
   return nav ? nav.getBoundingClientRect().height + 14 : 92;
 }
 
-function updateMeta(name, content, property = false) {
-  const selector = property ? `meta[property="${name}"]` : `meta[name="${name}"]`;
-  let tag = document.head.querySelector(selector);
-
-  if (!tag) {
-    tag = document.createElement("meta");
-    tag.setAttribute(property ? "property" : "name", name);
-    document.head.appendChild(tag);
-  }
-
-  tag.setAttribute("content", content);
-}
-
 export default function App() {
   const location = useLocation();
+  const { getByLodgifyId } = useProperties();
 
   useEffect(() => {
     const items = document.querySelectorAll(".reveal");
@@ -130,28 +115,26 @@ export default function App() {
   }, [location.pathname]);
 
   useEffect(() => {
+    const propertyMatch = location.pathname.match(/^\/property\/(\d+)$/);
+    if (propertyMatch) {
+      const property = getByLodgifyId(propertyMatch[1]);
+      if (property) {
+        applySeo(buildPropertySeo(property));
+        return;
+      }
+    }
+
     const pathKey = location.pathname.startsWith("/properties/")
-      ? "/properties"
+      ? "/"
       : location.pathname;
     const seo = SEO_BY_PATH[pathKey] ?? SEO_BY_PATH["/"];
-    const canonicalUrl = `https://www.holidayhomehost.ae${location.pathname}`;
-
-    document.title = seo.title;
-    updateMeta("description", seo.description);
-    updateMeta("og:title", seo.title, true);
-    updateMeta("og:description", seo.description, true);
-    updateMeta("og:url", canonicalUrl, true);
-    updateMeta("twitter:title", seo.title);
-    updateMeta("twitter:description", seo.description);
-
-    let canonical = document.head.querySelector('link[rel="canonical"]');
-    if (!canonical) {
-      canonical = document.createElement("link");
-      canonical.setAttribute("rel", "canonical");
-      document.head.appendChild(canonical);
-    }
-    canonical.setAttribute("href", canonicalUrl);
-  }, [location.pathname]);
+    applySeo({
+      title: seo.title,
+      description: seo.description,
+      canonical: `https://www.holidayhomehost.ae${location.pathname}`,
+      image: "https://www.holidayhomehost.ae/image-3.webp",
+    });
+  }, [location.pathname, getByLodgifyId]);
 
   useEffect(() => {
     if (!location.hash) {
@@ -174,29 +157,32 @@ export default function App() {
     <div className="hhh-fw">
       <Navbar />
 
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero />
-              <LodgifySearchBar />
-              <Sections />
-            </>
-          }
-        />
-        <Route path="/about" element={<About />} />
-        <Route path="/property-owners" element={<PropertyOwners />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/commission" element={<Commission />} />
-        <Route path="/how-it-works" element={<HowItWorks />} />
-        <Route path="/roi-calculator" element={<RoiCalculator />} />
-        <Route path="/partnerships" element={<Partnerships />} />
-        <Route path="/partnership-agreements" element={<PartnershipAgreements />} />
-        <Route path="/real-estate-agencies" element={<RealEstateAgencies />} />
-        <Route path="/properties/:slug" element={<PropertyDetails />} />
-        <Route path="/gallery" element={<GalleryPage />} />
-      </Routes>
+      <Suspense fallback={null}>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Hero />
+                <LodgifySearchBar />
+                <Sections />
+              </>
+            }
+          />
+          <Route path="/about" element={<About />} />
+          <Route path="/property-owners" element={<PropertyOwners />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/commission" element={<Commission />} />
+          <Route path="/how-it-works" element={<HowItWorks />} />
+          <Route path="/roi-calculator" element={<RoiCalculator />} />
+          <Route path="/partnerships" element={<Partnerships />} />
+          <Route path="/partnership-agreements" element={<PartnershipAgreements />} />
+          <Route path="/real-estate-agencies" element={<RealEstateAgencies />} />
+          <Route path="/property/:id" element={<PropertyDetails />} />
+          <Route path="/properties/:slug" element={<PropertySlugRedirect />} />
+          <Route path="/gallery" element={<GalleryPage />} />
+        </Routes>
+      </Suspense>
 
       <Footer />
 

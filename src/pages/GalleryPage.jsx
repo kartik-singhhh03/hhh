@@ -198,11 +198,11 @@ export default function GalleryPage() {
               </p>
             </div>
             <div className="gp-hero-links">
-              <Link to="/properties/hayat-island-sea-view" className="btn-primary">
+              <Link to="/property/761286" className="btn-primary">
                 <span className="material-symbols-outlined">home</span>
                 Bay Residences
               </Link>
-              <Link to="/properties/pacific-marjan-island-sea-view" className="btn-outline">
+              <Link to="/property/796112" className="btn-outline">
                 <span className="material-symbols-outlined">home</span>
                 Pacific Apartment
               </Link>
@@ -286,11 +286,11 @@ export default function GalleryPage() {
               <p>Choose from our premium coastal properties in Ras Al Khaimah.</p>
             </div>
             <div className="gp-cta-links">
-              <Link to="/properties/hayat-island-sea-view" className="btn-primary">
+              <Link to="/property/761286" className="btn-primary">
                 <span className="material-symbols-outlined">bed</span>
                 Bay Residences
               </Link>
-              <Link to="/properties/pacific-marjan-island-sea-view" className="btn-primary">
+              <Link to="/property/796112" className="btn-primary">
                 <span className="material-symbols-outlined">bed</span>
                 Pacific Apartment
               </Link>

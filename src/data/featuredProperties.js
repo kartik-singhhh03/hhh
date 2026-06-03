@@ -1,11 +1,13 @@
 /* ============================================================
-   FEATURED PROPERTIES DATA
-   Add new properties to expand the featured section and detail pages.
+   STATIC FALLBACK PROPERTY DATA
+   Used when the Lodgify API is unavailable.
+   Curated images remain here; live metadata comes from the API.
    ============================================================ */
 
 export const featuredProperties = [
   {
-    id: "prop-1",
+    id: "761286",
+    lodgifyId: 761286,
     slug: "hayat-island-sea-view",
     title: "HHH – 1 Bedroom in Hayat Island – MINA – Sea View",
     badge: "Sea View · Hayat Island",
@@ -17,6 +19,7 @@ export const featuredProperties = [
     area: "850 ft²",
     price: "AED 650",
     priceLabel: "per night",
+    rating: 5,
     shortDescription:
       "Luxury 1BR apartment in the newly completed Bay Residences (2026) on Hayat Island, Mina Al Arab. Prime beachfront location with private beach access, infinity pools, and a sea-view balcony offering a five-star resort atmosphere.",
     image: "/image-3.webp",
@@ -33,10 +36,11 @@ export const featuredProperties = [
       ],
       description:
         "Luxury 1BR apartment in Bay Residences on Hayat Island featuring beachfront access, infinity pools, sea views, and premium amenities. Located near InterContinental, Anantara Resort, Al Hamra Mall and Golf Club, with easy access to RAK Airport and Dubai.\n\nThe bedroom features a king-size bed with premium-quality linens, built-in wardrobes, large windows, and direct sea views. The bathroom includes a shower combination, vanity with mirror, and fresh towels. The fully equipped kitchen has a refrigerator, oven, stovetop, microwave, cookware, utensils, and all dining essentials.\n\nThe living area offers a comfortable sofa, coffee table, flat-screen TV, free high-speed WiFi, and balcony access. Step out to your private balcony for Hayat Island beach views, a seating area, and the perfect morning coffee or relaxation spot.",
+      descriptionIsHtml: false,
       amenities: {
-        poolSpa:       ["Swimming Pool"],
+        poolSpa: ["Swimming Pool"],
         locationFeatures: ["Beachfront", "Waterfront"],
-        bathroom:      [
+        bathroom: [
           "Bed Linen",
           "Bidet",
           "Blow Dryer",
@@ -48,8 +52,8 @@ export const featuredProperties = [
         ],
         heatingCooling: ["Air Conditioning"],
         entertainment: ["TV"],
-        internet:      ["Wireless Broadband Internet"],
-        kitchen:       [
+        internet: ["Wireless Broadband Internet"],
+        kitchen: [
           "Coffee Machine",
           "Cooking Utensils",
           "Dishwasher",
@@ -60,15 +64,15 @@ export const featuredProperties = [
           "Refrigerator",
           "Toaster",
         ],
-        safety:        [
+        safety: [
           "Carbon Monoxide Detector",
           "Fire Extinguisher",
           "First Aid Kit",
           "Safe",
           "Smoke Detector",
         ],
-        policies:      ["Elevator", "Smoking Not Allowed"],
-        parking:       ["Parking", "Parking Included"],
+        policies: ["Elevator", "Smoking Not Allowed"],
+        parking: ["Parking", "Parking Included"],
       },
       guestAccess:
         "Guests can access the entire apartment including the bedroom, bathroom, kitchen, living area, and private balcony. The building provides secure parking, a fitness centre, swimming pool, and 24/7 security for all guests.",
@@ -77,7 +81,8 @@ export const featuredProperties = [
         checkOut: "11:00 AM",
         noPets: true,
         noSmoking: true,
-        smokingNote: "Smoking is permitted on the balcony only. Smoking inside the apartment will incur a violation fee of AED 1,500.",
+        smokingNote:
+          "Smoking is permitted on the balcony only. Smoking inside the apartment will incur a violation fee of AED 1,500.",
         additionalRules: [
           "No parties or events",
           "Quiet hours between 10 PM – 8 AM",
@@ -90,14 +95,18 @@ export const featuredProperties = [
         ],
       },
       policyNotes: {
-        payment: "50% of the total amount is due at reservation. The remaining 50% is due 7 days before arrival.",
-        cancellation: "This reservation is non-refundable. Cancellations will not be eligible for a refund.",
+        payment:
+          "50% of the total amount is due at reservation. The remaining 50% is due 7 days before arrival.",
+        cancellation:
+          "This reservation is non-refundable. Cancellations will not be eligible for a refund.",
         securityDeposit: "No security deposit is required for this property.",
       },
       location: {
-        address: "Bay Residences, Hayat Island, Mina Al Arab, Ras Al Khaimah, United Arab Emirates",
+        address:
+          "Bay Residences, Hayat Island, Mina Al Arab, Ras Al Khaimah, United Arab Emirates",
         mapCode: "MPPM+R8 Al Jazeera Al Hamra, Ras Al Khaimah",
-        mapsUrl: "https://maps.google.com/?q=Hayat+Island+Mina+Al+Arab+Ras+Al+Khaimah",
+        mapsUrl:
+          "https://maps.google.com/?q=Hayat+Island+Mina+Al+Arab+Ras+Al+Khaimah",
       },
       host: {
         name: "Holiday Home Host",
@@ -122,7 +131,8 @@ export const featuredProperties = [
   },
 
   {
-    id: "prop-2",
+    id: "796112",
+    lodgifyId: 796112,
     slug: "pacific-marjan-island-sea-view",
     title: "HHH – 2 BR in Pacific – Marjan Island – Sea View",
     badge: "Sea View · Al Marjan Island",
@@ -134,6 +144,7 @@ export const featuredProperties = [
     area: "1,200 ft²",
     price: "AED 850",
     priceLabel: "per night",
+    rating: 0,
     shortDescription:
       "Luxury 2-bedroom apartment in Pacific, Al Marjan Island with direct beach access, swimming pools, and private balcony overlooking serene sea views. Ideal for families and groups seeking a premium coastal stay.",
     image: "/pacific-apt-16.webp",
@@ -153,6 +164,7 @@ export const featuredProperties = [
       ],
       description:
         "Escape to this stunning 2-bedroom luxury apartment in the prestigious Pacific tower on Al Marjan Island. Perfectly positioned with a private balcony that offers uninterrupted sea views, this residence is a sanctuary of coastal elegance. The spacious layout comfortably accommodates up to 5 guests across two well-appointed bedrooms and three bathrooms, making it ideal for families or small groups. Direct beach access lets you step from your door to pristine sand and turquoise waters, while resort-grade swimming pools, a state-of-the-art fitness room, and a shared tennis court ensure there is always something to enjoy. High-speed WiFi, air conditioning, and secure covered parking complete this premium holiday experience.",
+      descriptionIsHtml: false,
       amenities: {
         poolSpa: ["Swimming Pool", "Direct Beach Access", "Beachfront Resort"],
         kitchen: [
@@ -170,7 +182,12 @@ export const featuredProperties = [
           "Luxury Toiletries",
           "Towels Provided",
         ],
-        entertainment: ["Smart TV", "Streaming Services", "Sea View Balcony", "Shared Tennis Court"],
+        entertainment: [
+          "Smart TV",
+          "Streaming Services",
+          "Sea View Balcony",
+          "Shared Tennis Court",
+        ],
         internet: ["Free WiFi", "High Speed Internet"],
         safety: ["24/7 Security", "CCTV", "Smoke Detector", "Fire Extinguisher"],
         policies: ["No Pets", "No Smoking", "No Parties"],
@@ -193,7 +210,8 @@ export const featuredProperties = [
         ],
       },
       location: {
-        address: "Pacific Tower, Al Marjan Island, Ras Al Khaimah, United Arab Emirates",
+        address:
+          "Pacific Tower, Al Marjan Island, Ras Al Khaimah, United Arab Emirates",
         mapCode: "MPPM+R8 Al Jazeera Al Hamra, Ras Al Khaimah",
         mapsUrl:
           "https://maps.google.com/?q=Al+Marjan+Island+Ras+Al+Khaimah",

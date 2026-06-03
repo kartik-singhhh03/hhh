@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { featuredProperties } from "../data/featuredProperties";
+import { useProperties } from "../context/PropertiesProvider";
+import { sanitizePropertyHtml } from "../lib/sanitizeHtml";
 import MarjanIslandAdvantage from "../components/MarjanIslandAdvantage";
 import "./PropertyDetails.css";
 
@@ -64,11 +65,27 @@ function Lightbox({ images, activeIndex, onClose, onPrev, onNext }) {
    MAIN PAGE
 ────────────────────────────────────────────── */
 export default function PropertyDetails() {
-  const { slug } = useParams();
+  const { id } = useParams();
   const navigate = useNavigate();
-  const property = featuredProperties.find((p) => p.slug === slug);
+  const { getByLodgifyId, loading } = useProperties();
+  const property = getByLodgifyId(id);
 
   const [lbIndex, setLbIndex] = useState(null);
+
+  const sanitizedDescriptionHtml = useMemo(() => {
+    if (!property?.fullData?.descriptionIsHtml) return "";
+    return sanitizePropertyHtml(property.fullData.description);
+  }, [property]);
+
+  if (loading && !property) {
+    return (
+      <div
+        className="pd-page pd-page--loading"
+        aria-busy="true"
+        aria-live="polite"
+      />
+    );
+  }
 
   if (!property) {
     return (
@@ -240,11 +257,27 @@ export default function PropertyDetails() {
         ══════════════════════════════════════ */}
         <div className="pd-section">
           <h2 className="pd-section-title">About This Property</h2>
-          {fullData.description.split("\n\n").map((para, i) => (
-            <p className="pd-description" key={i} style={{ marginBottom: i < fullData.description.split("\n\n").length - 1 ? "16px" : 0 }}>
-              {para}
-            </p>
-          ))}
+          {fullData.descriptionIsHtml ? (
+            <div
+              className="pd-description"
+              dangerouslySetInnerHTML={{ __html: sanitizedDescriptionHtml }}
+            />
+          ) : (
+            fullData.description.split("\n\n").map((para, i) => (
+              <p
+                className="pd-description"
+                key={i}
+                style={{
+                  marginBottom:
+                    i < fullData.description.split("\n\n").length - 1
+                      ? "16px"
+                      : 0,
+                }}
+              >
+                {para}
+              </p>
+            ))
+          )}
         </div>
 
         {/* ══════════════════════════════════════
@@ -444,7 +477,9 @@ export default function PropertyDetails() {
             <h2 className="pd-section-title">Guest Reviews</h2>
             <div className="pd-reviews-summary">
               <div className="pd-rating-badge">
-                <span className="pd-rating-score">5.0</span>
+                <span className="pd-rating-score">
+                  {property.rating > 0 ? property.rating.toFixed(1) : "5.0"}
+                </span>
                 <span className="pd-rating-stars">★★★★★</span>
                 <span className="pd-rating-label">Overall Rating</span>
               </div>

@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
-import { featuredProperties } from "../data/featuredProperties";
+import { useProperties } from "../context/PropertiesProvider";
+import { getPropertyRoutePath } from "../lib/propertiesApi";
 
 function PropertyCard({ property }) {
   const navigate = useNavigate();
@@ -13,7 +14,7 @@ function PropertyCard({ property }) {
 
   const handleKnowMore = (e) => {
     e.preventDefault();
-    navigate(`/properties/${property.slug}`);
+    navigate(getPropertyRoutePath(property));
   };
 
   return (
@@ -71,7 +72,7 @@ function PropertyCard({ property }) {
             {property.buttonText}
           </a>
           <a
-            href={`/properties/${property.slug}`}
+            href={getPropertyRoutePath(property)}
             className="btn-outline"
             onClick={handleKnowMore}
           >
@@ -85,6 +86,8 @@ function PropertyCard({ property }) {
 }
 
 export default function Property() {
+  const { properties } = useProperties();
+
   return (
     <section className="property-section" id="property">
       <div className="container">
@@ -92,8 +95,8 @@ export default function Property() {
           <div className="section-label">Featured Properties</div>
         </div>
 
-        {featuredProperties.map((property, index) => (
-          <PropertyCard key={property.id} property={property} />
+        {properties.map((property) => (
+          <PropertyCard key={property.lodgifyId ?? property.id} property={property} />
         ))}
       </div>
     </section>

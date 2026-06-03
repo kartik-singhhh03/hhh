@@ -1,0 +1,122 @@
+/* Production hardening — touch targets, focus, mobile overflow fixes only */
+
+/* Touch targets (minimum 44×44px) */
+.nav-hamburger {
+  min-width: 44px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.nav-dropdown-trigger {
+  min-height: 44px;
+}
+
+.nav.menu-open .nav-links a,
+.nav.menu-open .nav-dropdown-trigger {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-dropdown-item {
+  min-height: 44px;
+}
+
+.btn-primary,
+.btn-outline,
+.btn-primary-dark {
+  min-height: 44px;
+}
+
+.hero-scroll {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.pd-lb-close,
+.pd-lb-nav {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+/* Keyboard focus — visible without changing default appearance at rest */
+:focus-visible {
+  outline: 2px solid var(--primary-dark);
+  outline-offset: 2px;
+}
+
+.nav-links a:focus-visible,
+.nav-dropdown-trigger:focus-visible,
+.btn-primary:focus-visible,
+.btn-outline:focus-visible,
+.btn-primary-dark:focus-visible {
+  outline: 2px solid var(--primary-dark);
+  outline-offset: 2px;
+}
+
+/* Mobile overflow / clipping fixes */
+@media (max-width: 480px) {
+  .hero-title {
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+    hyphens: auto;
+  }
+
+  .pd-title {
+    word-wrap: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  .pd-breadcrumb {
+    flex-wrap: wrap;
+    row-gap: 4px;
+  }
+
+  .property-buttons {
+    width: 100%;
+  }
+
+  .property-buttons .btn-primary-dark,
+  .property-buttons .btn-outline {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .nav-dropdown-item-name,
+  .nav-dropdown-item-loc {
+    max-width: 100%;
+    white-space: normal;
+  }
+
+  .pd-header-inner {
+    gap: 12px;
+  }
+
+  .pd-price-block .price {
+    word-break: break-word;
+  }
+}
+
+@media (max-width: 430px) {
+  .container {
+    padding: 0 16px;
+  }
+
+  .hero-content {
+    padding: 0 16px 72px;
+  }
+
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-outline {
+    width: 100%;
+    max-width: 320px;
+    justify-content: center;
+  }
+}
+
+/* Property page loading gate — reserves space, no visible UI change */
+.pd-page--loading {
+  min-height: 60vh;
+}

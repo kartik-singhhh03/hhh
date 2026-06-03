@@ -1,8 +1,25 @@
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
+const HERO_IMAGE = "/hero.webp";
+
 export default function Hero() {
   const bgRef = useRef(null);
+
+  useEffect(() => {
+    const placeholder = document.getElementById("hero-lcp");
+    const heroImg = bgRef.current;
+    if (!placeholder || !heroImg) return undefined;
+
+    const removePlaceholder = () => placeholder.remove();
+    if (heroImg.complete) {
+      removePlaceholder();
+      return undefined;
+    }
+
+    heroImg.addEventListener("load", removePlaceholder, { once: true });
+    return () => heroImg.removeEventListener("load", removePlaceholder);
+  }, []);
 
   useEffect(() => {
     let ticking = false;
@@ -24,14 +41,19 @@ export default function Hero() {
 
   return (
     <section className="hero" id="hero">
-      <div
-     className="hero-bg"
-id="heroBg"
-ref={bgRef}
-style={{
-  backgroundImage: `url("https://images.unsplash.com/photo-1540541338287-41700207dee6?auto=format&fit=crop&q=80&w=2000")`,
-}}
-      ></div>
+      <img
+        className="hero-bg"
+        id="heroBg"
+        ref={bgRef}
+        src={HERO_IMAGE}
+        srcSet="/hero-800.webp 800w, /hero.webp 1600w"
+        sizes="100vw"
+        alt=""
+        fetchPriority="high"
+        decoding="async"
+        width={1600}
+        height={1067}
+      />
       <div className="hero-overlay"></div>
       <div className="hero-content">
         <div className="hero-badge">

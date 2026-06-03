@@ -1,38 +1,22 @@
 import { useEffect } from "react";
 import { polishLodgifyWidget } from "./lodgifyTheme";
+import { useDeferredLodgifyScript } from "../lib/deferredLodgifyScript";
 
 const SCRIPT_SRC =
   "https://app.lodgify.com/portable-search-bar/stable/renderPortableSearchBar.js";
 
 const SCRIPT_ID = "lodgify-psb-script";
 
-function renderLodgifyWidget(scriptId, scriptSrc) {
-  const existing = document.getElementById(scriptId);
-
-  if (existing?.dataset.loaded === "true") {
-    existing.remove();
-  } else if (existing) {
-    return;
-  }
-
-  const script = document.createElement("script");
-  script.id = scriptId;
-  script.src = scriptSrc;
-  script.defer = true;
-  script.async = true;
-  script.dataset.loaded = "false";
-  script.onload = () => {
-    script.dataset.loaded = "true";
-  };
-
-  document.body.appendChild(script);
-}
-
 export default function LodgifySearchBar() {
-  useEffect(() => {
-    renderLodgifyWidget(SCRIPT_ID, SCRIPT_SRC);
-    return polishLodgifyWidget("lodgify-search-bar");
-  }, []);
+  useDeferredLodgifyScript({
+    scriptId: SCRIPT_ID,
+    scriptSrc: SCRIPT_SRC,
+    sectionId: "lodgify-search",
+    rootMargin: "600px",
+    idleTimeout: 4000,
+  });
+
+  useEffect(() => polishLodgifyWidget("lodgify-search-bar"), []);
 
   return (
     <section

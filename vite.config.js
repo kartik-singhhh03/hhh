@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import { lodgifyApiMiddleware } from "./vite.lodgifyApi.mjs";
 
 const reactRoutes = new Set([
   "/",
@@ -42,7 +43,7 @@ function spaRouteFallback() {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [spaRouteFallback(), react()],
+  plugins: [lodgifyApiMiddleware(), spaRouteFallback(), react()],
 
   build: {
     target: "esnext",
@@ -54,10 +55,23 @@ export default defineConfig({
 
     rollupOptions: {
       output: {
-        // Split large dependencies into separate cached chunks
-        manualChunks: {
-          "react-vendor": ["react", "react-dom"],
-          router: ["react-router-dom"],
+        manualChunks(id) {
+          if (id.includes("node_modules/dompurify")) {
+            return "dompurify";
+          }
+          if (
+            id.includes("node_modules/react-dom") ||
+            id.includes("node_modules/react/") ||
+            id.includes("node_modules/scheduler")
+          ) {
+            return "react-vendor";
+          }
+          if (
+            id.includes("node_modules/react-router") ||
+            id.includes("node_modules/@remix-run/router")
+          ) {
+            return "router";
+          }
         },
         entryFileNames: "js/[name]-[hash].js",
         chunkFileNames: "js/[name]-[hash].js",

@@ -261,6 +261,29 @@
   line-height: 1.95;
   max-width: 820px;
 }
+.pd-description p { margin: 0 0 16px; }
+.pd-description p:last-child { margin-bottom: 0; }
+.pd-description ul,
+.pd-description ol {
+  margin: 0 0 16px;
+  padding-left: 1.25em;
+}
+.pd-description li { margin-bottom: 8px; }
+.pd-description h2,
+.pd-description h3,
+.pd-description h4 {
+  font-family: var(--font-serif);
+  color: var(--text-dark);
+  margin: 20px 0 12px;
+  line-height: 1.35;
+}
+.pd-description h2 { font-size: 1.35rem; }
+.pd-description h3 { font-size: 1.15rem; }
+.pd-description h4 { font-size: 1rem; }
+.pd-description a {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
 
 /* ============================================================
    SECTION 4 — AMENITIES
