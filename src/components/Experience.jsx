@@ -61,7 +61,7 @@ export default function Experience() {
         <div className="experience-wrap">
           <div className="experience-image reveal">
             <img
-              src="/hhh_image.jpeg"
+              src="/hhh_image.jpeg?v=3"
               alt="Holiday Home Host logo on coastal water background"
               width={1024}
               height={901}
