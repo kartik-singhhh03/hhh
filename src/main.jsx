@@ -5,6 +5,7 @@ import App from "./App.jsx";
 import { PropertiesProvider } from "./context/PropertiesProvider.jsx";
 import "./styles.css";
 import "./hardening.css";
+import "./mobile-polish.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

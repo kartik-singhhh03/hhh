@@ -1,6 +1,47 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
+const FOOTER_SECTIONS = [
+  {
+    id: "quick-links",
+    title: "Quick Links",
+    links: [
+      { to: "/", label: "Home" },
+      { to: "/about", label: "About HHH" },
+      { to: "/services", label: "Our Services" },
+      { to: "/commission", label: "Commission" },
+      { to: "/contact", label: "Contact Us" },
+    ],
+  },
+  {
+    id: "owners-partners",
+    title: "Owners & Partners",
+    links: [
+      { to: "/property-owners", label: "For Property Owners" },
+      { to: "/commission", label: "Commission Structure" },
+      { to: "/how-it-works", label: "How It Works" },
+      { to: "/roi-calculator", label: "ROI Calculator" },
+    ],
+  },
+  {
+    id: "contact-info",
+    title: "Contact",
+    items: [
+      { href: "mailto:hello@holidayhomehost.ae", label: "hello@holidayhomehost.ae" },
+      { href: "tel:+971501234567", label: "+971 50 123 4567" },
+      { type: "text", label: "Hayat Island, Mina Al Arab" },
+      { type: "text", label: "Ras Al Khaimah, UAE" },
+    ],
+  },
+];
+
 export default function Footer() {
+  const [openSection, setOpenSection] = useState(null);
+
+  const toggleSection = (id) => {
+    setOpenSection((current) => (current === id ? null : id));
+  };
+
   return (
     <footer className="footer" id="footer">
       <div className="container">
@@ -17,10 +58,20 @@ export default function Footer() {
               experiences.
             </p>
             <div className="footer-social">
-              <a href="#" className="social-icon" aria-label="Instagram">
+              <a
+                href="https://www.instagram.com/holidayhomehost"
+                className="social-icon"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="material-symbols-outlined">photo_camera</span>
               </a>
-              <a href="#" className="social-icon" aria-label="WhatsApp">
+              <a
+                href="tel:+971501234567"
+                className="social-icon"
+                aria-label="WhatsApp"
+              >
                 <span className="material-symbols-outlined">chat_bubble</span>
               </a>
               <a href="#" className="social-icon" aria-label="LinkedIn">
@@ -28,58 +79,43 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <div className="footer-col">
-            <h4>Quick Links</h4>
-            <ul>
-              <li>
-                <Link to="/">Home</Link>
-              </li>
-              <li>
-                <Link to="/about">About HHH</Link>
-              </li>
-              <li>
-                <Link to="/services">Our Services</Link>
-              </li>
-              <li>
-                <Link to="/commission">Commission</Link>
-              </li>
-              <li>
-                <Link to="/contact">Contact Us</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="footer-col">
-            <h4>Owners &amp; Partners</h4>
-            <ul>
-              <li>
-                <Link to="/property-owners">For Property Owners</Link>
-              </li>
-              <li>
-                <Link to="/commission">Commission Structure</Link>
-              </li>
-              <li>
-                <Link to="/how-it-works">How It Works</Link>
-              </li>
-              <li>
-                <Link to="/roi-calculator">ROI Calculator</Link>
-              </li>
-            </ul>
-          </div>
-          <div className="footer-col">
-            <h4>Contact</h4>
-            <ul>
-              <li>
-                <a href="mailto:hello@holidayhomehost.ae">
-                  hello@holidayhomehost.ae
-                </a>
-              </li>
-              <li>
-                <a href="tel:+971501234567">+971 50 123 4567</a>
-              </li>
-              <li>Hayat Island, Mina Al Arab</li>
-              <li>Ras Al Khaimah, UAE</li>
-            </ul>
-          </div>
+
+          {FOOTER_SECTIONS.map((section) => (
+            <div
+              key={section.id}
+              className={`footer-col${openSection === section.id ? " is-open" : ""}`}
+            >
+              <button
+                type="button"
+                className="footer-col-toggle"
+                aria-expanded={openSection === section.id}
+                aria-controls={`footer-panel-${section.id}`}
+                onClick={() => toggleSection(section.id)}
+              >
+                <h4>{section.title}</h4>
+                <span className="footer-col-chevron material-symbols-outlined" aria-hidden="true">
+                  expand_more
+                </span>
+              </button>
+              <ul id={`footer-panel-${section.id}`}>
+                {section.links
+                  ? section.links.map((link) => (
+                      <li key={link.to}>
+                        <Link to={link.to}>{link.label}</Link>
+                      </li>
+                    ))
+                  : section.items.map((item) => (
+                      <li key={item.label}>
+                        {item.href ? (
+                          <a href={item.href}>{item.label}</a>
+                        ) : (
+                          item.label
+                        )}
+                      </li>
+                    ))}
+              </ul>
+            </div>
+          ))}
         </div>
         <div className="footer-bottom">
           <span>&copy; 2026 Holiday Home Host. All rights reserved.</span>

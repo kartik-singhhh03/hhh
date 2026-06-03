@@ -751,6 +751,9 @@ section { padding: 100px 0; }
   background: linear-gradient(145deg, rgba(255,255,255,.98), rgba(251,248,242,.94));
   box-shadow: 0 20px 62px rgba(28,50,64,.12);
 }
+.lodgify-booking-stack {
+  display: contents;
+}
 
 .lodgify-widget-host button,
 .lodgify-widget-host input[type="button"],

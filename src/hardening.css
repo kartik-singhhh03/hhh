@@ -41,6 +41,16 @@
   min-height: 44px;
 }
 
+.footer-col-toggle,
+.review-read-more {
+  min-height: 44px;
+}
+
+.social-icon {
+  min-width: 44px;
+  min-height: 44px;
+}
+
 /* Keyboard focus — visible without changing default appearance at rest */
 :focus-visible {
   outline: 2px solid var(--primary-dark);

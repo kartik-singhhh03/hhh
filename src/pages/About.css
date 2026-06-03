@@ -449,6 +449,51 @@
     height: auto;
     align-items: flex-start;
   }
+  .story-img-main {
+    aspect-ratio: auto;
+    height: 220px;
+    max-height: 220px;
+    background: linear-gradient(135deg, rgba(144,203,220,.18), rgba(244,233,215,.32));
+  }
+  .story-img-main img {
+    object-fit: contain;
+    object-position: center;
+  }
+  .values-image {
+    aspect-ratio: auto;
+    height: 220px;
+    max-height: 220px;
+    background: linear-gradient(135deg, rgba(144,203,220,.18), rgba(244,233,215,.32));
+  }
+  .values-image img {
+    object-fit: contain;
+    object-position: center;
+  }
+  .about-reviews-grid .about-review-card {
+    padding: 24px 20px;
+  }
+  .about-review-text {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+  }
+  .about-review-avatar {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+  .story-section,
+  .values-section,
+  .team-section,
+  .location-section,
+  .about-reviews,
+  .about-cta {
+    padding-top: 56px;
+    padding-bottom: 56px;
+  }
   .about-hero h1 {
     font-size: 2.55rem;
   }

@@ -35,9 +35,10 @@ export default function LodgifyBookingBox() {
             </p>
           </div>
 
-          <div className="lodgify-widget-host lodgify-booking-host reveal reveal-delay-1">
-            <div
-              id="lodgify-book-now-box"
+          <div className="lodgify-booking-stack">
+            <div className="lodgify-widget-host lodgify-booking-host reveal reveal-delay-1">
+              <div
+                id="lodgify-book-now-box"
               data-website-id="625170"
               data-rental-id="761286"
               data-slug="holiday-home-host"
@@ -71,6 +72,7 @@ export default function LodgifyBookingBox() {
               data-pets-not-allowed-label="Not allowed"
               data-done-label="Done"
             />
+            </div>
             <p className="lodgify-booking-note">Rates are shown in AED per night.</p>
           </div>
         </div>

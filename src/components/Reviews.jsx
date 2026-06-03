@@ -1,3 +1,44 @@
+import { useState } from "react";
+
+function ReviewCard({ review }) {
+  const [expanded, setExpanded] = useState(false);
+  const isLong = review.text.length > 180;
+
+  return (
+    <article className="review-card">
+      <div className="review-stars" aria-hidden="true">
+        {"★★★★★"}
+      </div>
+      <p
+        className={`review-text${expanded ? " is-expanded" : ""}`}
+        id={`review-text-${review.name.replace(/\s/g, "-")}`}
+      >
+        {review.text}
+      </p>
+      {isLong ? (
+        <button
+          type="button"
+          className="review-read-more"
+          aria-expanded={expanded}
+          aria-controls={`review-text-${review.name.replace(/\s/g, "-")}`}
+          onClick={() => setExpanded((open) => !open)}
+        >
+          {expanded ? "Show Less" : "Read More"}
+        </button>
+      ) : null}
+      <div className="review-author">
+        <div className="review-avatar" aria-hidden="true">
+          {review.avatar}
+        </div>
+        <div>
+          <div className="review-name">{review.name}</div>
+          <div className="review-country">{review.country}</div>
+        </div>
+      </div>
+    </article>
+  );
+}
+
 const reviews = [
   {
     text: '"HHH transformed my investment property into a high-performing asset. The team\'s professionalism and transparent reporting exceeded every expectation - my revenue surpassed projections from month one."',
@@ -39,17 +80,7 @@ export default function Reviews() {
         <div className="reviews-slider reveal reveal-delay-1">
           <div className="reviews-track" id="reviewsTrack">
             {reviews.map((review) => (
-              <div key={review.name} className="review-card">
-                <div className="review-stars">{"\u2605\u2605\u2605\u2605\u2605"}</div>
-                <p className="review-text">{review.text}</p>
-                <div className="review-author">
-                  <div className="review-avatar">{review.avatar}</div>
-                  <div>
-                    <div className="review-name">{review.name}</div>
-                    <div className="review-country">{review.country}</div>
-                  </div>
-                </div>
-              </div>
+              <ReviewCard key={review.name} review={review} />
             ))}
           </div>
         </div>
