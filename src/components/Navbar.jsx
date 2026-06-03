@@ -10,6 +10,7 @@ const navItems = [
   { to: "/services", label: "Services" },
   { to: "/commission", label: "Commission" },
   { to: "/how-it-works", label: "How It Works" },
+  { to: "/contact", label: "Contact" },
 ];
 
 export default function Navbar() {

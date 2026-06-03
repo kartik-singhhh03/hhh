@@ -47,6 +47,7 @@ scripts/       Image optimization utilities
 | `/about` | About |
 | `/property/:id` | Property details (Lodgify ID) |
 | `/gallery` | Full gallery |
+| `/contact` | Contact form & details |
 | `/property-owners` | Owner information |
 | `/services`, `/commission` | Services |
 | `/how-it-works`, `/roi-calculator` | Process tools |

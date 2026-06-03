@@ -240,7 +240,7 @@ export default function Commission() {
             <h2>Ready to Partner<br />with HHH?</h2>
             <p>Our 20% all-inclusive management fee is all you pay. No setup fees, no hidden charges, no complicated contracts. Just results.</p>
             <div className="cta-buttons">
-              <Link to="/#contact" className="btn-primary">Get in Touch</Link>
+              <Link to="/contact" className="btn-primary">Get in Touch</Link>
               <Link to="/how-it-works" className="btn-outline">See How It Works</Link>
             </div>
           </div>

@@ -44,7 +44,7 @@ export default function Footer() {
                 <Link to="/commission">Commission</Link>
               </li>
               <li>
-                <a href="#contact">Contact Us</a>
+                <Link to="/contact">Contact Us</Link>
               </li>
             </ul>
           </div>

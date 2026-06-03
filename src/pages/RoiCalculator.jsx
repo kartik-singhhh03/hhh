@@ -154,7 +154,7 @@ export default function RoiCalculator() {
                 </div>
               </div>
 
-              <Link to="/#contact" className="btn-primary-dark" style={{ textAlign: "center", justifyContent: "center", marginTop: "8px" }}>
+              <Link to="/contact" className="btn-primary-dark" style={{ textAlign: "center", justifyContent: "center", marginTop: "8px" }}>
                 Get Your Free Revenue Assessment
               </Link>
             </div>

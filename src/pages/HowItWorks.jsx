@@ -225,7 +225,7 @@ export default function HowItWorks() {
             <h2>Ready to Start<br />Earning?</h2>
             <p>Contact us today for a free, no-obligation property assessment. We'll provide a personalised revenue forecast and walk you through the next steps.</p>
             <div className="cta-buttons">
-              <Link to="/#contact" className="btn-primary">Book a Free Consultation</Link>
+              <Link to="/contact" className="btn-primary">Book a Free Consultation</Link>
               <Link to="/roi-calculator" className="btn-outline">Calculate Your Revenue</Link>
             </div>
           </div>

@@ -121,7 +121,7 @@ export default function PropertyDetails() {
 
   const handleContactHost = (e) => {
     e.preventDefault();
-    navigate("/#contact");
+    navigate("/contact");
   };
 
   return (
@@ -531,7 +531,7 @@ export default function PropertyDetails() {
                 Check Availability
               </a>
               <a
-                href="/#contact"
+                href="/contact"
                 className="btn-outline"
                 onClick={handleContactHost}
                 id={`pd-cta-contact-${property.id}`}

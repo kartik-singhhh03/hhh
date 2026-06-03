@@ -231,7 +231,7 @@ export default function PartnershipAgreements() {
             <h2>Ready to Formalise<br />Our Partnership?</h2>
             <p>Get in touch today and our team will send you a draft agreement within 24 hours. No commitment required to review.</p>
             <div className="cta-buttons">
-              <Link to="/#contact" className="btn-primary">Request Agreement Draft</Link>
+              <Link to="/contact" className="btn-primary">Request Agreement Draft</Link>
               <Link to="/partnerships" className="btn-outline">Back to Partnerships</Link>
             </div>
           </div>

@@ -109,7 +109,7 @@ export default function Partnerships() {
               </div>
               <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.3rem", color: "var(--text-dark)", marginBottom: "12px" }}>Travel Agencies</h3>
               <p style={{ fontSize: ".88rem", color: "var(--text-muted)", lineHeight: 1.8 }}>Bundle our luxury apartments into your RAK travel packages. Exclusive rates and white-label booking options available.</p>
-              <Link to="/#contact" style={{ display: "inline-block", marginTop: "20px", color: "var(--primary)", fontFamily: "'DM Sans',sans-serif", fontSize: ".85rem", fontWeight: 600, letterSpacing: ".06em" }}>Learn More →</Link>
+              <Link to="/contact" style={{ display: "inline-block", marginTop: "20px", color: "var(--primary)", fontFamily: "'DM Sans',sans-serif", fontSize: ".85rem", fontWeight: 600, letterSpacing: ".06em" }}>Learn More →</Link>
             </div>
             <div style={{ background: "rgba(144,203,220,.06)", border: "1px solid rgba(144,203,220,.2)", borderRadius: "24px", padding: "48px 32px", textAlign: "center", transition: "all .4s" }} onMouseOver={(e) => { e.currentTarget.style.transform = 'translateY(-8px)'; e.currentTarget.style.boxShadow = '0 20px 60px rgba(144,203,220,.15)'; }} onMouseOut={(e) => { e.currentTarget.style.transform = ''; e.currentTarget.style.boxShadow = ''; }}>
               <div style={{ display: "flex", justifyContent: "center", marginBottom: "16px", color: "var(--primary)" }}>
@@ -117,7 +117,7 @@ export default function Partnerships() {
               </div>
               <h3 style={{ fontFamily: "'Playfair Display',serif", fontSize: "1.3rem", color: "var(--text-dark)", marginBottom: "12px" }}>Lifestyle Brands</h3>
               <p style={{ fontSize: ".88rem", color: "var(--text-muted)", lineHeight: 1.8 }}>Collaborate on co-branded experiences, campaigns, and influencer-led content that reaches high-net-worth audiences.</p>
-              <Link to="/#contact" style={{ display: "inline-block", marginTop: "20px", color: "var(--primary)", fontFamily: "'DM Sans',sans-serif", fontSize: ".85rem", fontWeight: 600, letterSpacing: ".06em" }}>Learn More →</Link>
+              <Link to="/contact" style={{ display: "inline-block", marginTop: "20px", color: "var(--primary)", fontFamily: "'DM Sans',sans-serif", fontSize: ".85rem", fontWeight: 600, letterSpacing: ".06em" }}>Learn More →</Link>
             </div>
           </div>
         </div>
@@ -169,7 +169,7 @@ export default function Partnerships() {
             <h2>Let's Build Something<br />Extraordinary Together</h2>
             <p>Contact our partnerships team today and discover how we can create a mutually rewarding relationship tailored to your business model.</p>
             <div className="cta-buttons">
-              <Link to="/#contact" className="btn-primary">Get in Touch</Link>
+              <Link to="/contact" className="btn-primary">Get in Touch</Link>
               <Link to="/partnership-agreements" className="btn-outline">View Agreement Terms</Link>
             </div>
           </div>

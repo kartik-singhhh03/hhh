@@ -217,7 +217,7 @@ export default function PropertyOwners() {
             <p>Join our growing portfolio of luxury Ras Al Khaimah holiday homes. Our team will guide you through every step of the onboarding process.</p>
             <div className="cta-buttons">
               <Link to="/how-it-works" className="btn-primary">See Listing Process</Link>
-              <Link to="/#contact" className="btn-outline" style={{ color: "#1C3240", borderColor: "rgba(144,203,220,.28)" }}>Contact Us Today</Link>
+              <Link to="/contact" className="btn-outline" style={{ color: "#1C3240", borderColor: "rgba(144,203,220,.28)" }}>Contact Us Today</Link>
             </div>
           </div>
         </div>

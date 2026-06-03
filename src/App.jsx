@@ -20,6 +20,7 @@ const RealEstateAgencies = lazy(() => import("./pages/RealEstateAgencies"));
 const PropertyDetails = lazy(() => import("./pages/PropertyDetails"));
 const PropertySlugRedirect = lazy(() => import("./pages/PropertySlugRedirect"));
 const GalleryPage = lazy(() => import("./pages/GalleryPage"));
+const ContactPage = lazy(() => import("./pages/Contact"));
 
 const SEO_BY_PATH = {
   "/": {
@@ -76,6 +77,11 @@ const SEO_BY_PATH = {
     title: "Property Gallery | Holiday Home Host",
     description:
       "Browse our full photo gallery of premium holiday homes in Ras Al Khaimah — Bay Residences on Hayat Island and Pacific Apartment on Al Marjan Island.",
+  },
+  "/contact": {
+    title: "Contact Us | Holiday Home Host",
+    description:
+      "Contact Holiday Home Host for luxury stays, property management services, and partnership opportunities in Ras Al Khaimah.",
   },
 };
 
@@ -181,6 +187,7 @@ export default function App() {
           <Route path="/property/:id" element={<PropertyDetails />} />
           <Route path="/properties/:slug" element={<PropertySlugRedirect />} />
           <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/contact" element={<ContactPage />} />
         </Routes>
       </Suspense>
 

@@ -112,7 +112,7 @@ export default function RealEstateAgencies() {
                   </div>
                 </div>
               </div>
-              <Link to="/#contact" className="btn-primary-dark">Become a Partner Agency →</Link>
+              <Link to="/contact" className="btn-primary-dark">Become a Partner Agency →</Link>
             </div>
 
             <div className="reveal reveal-delay-2">
@@ -197,7 +197,7 @@ export default function RealEstateAgencies() {
             <h2>Start Earning<br />Recurring Revenue Today</h2>
             <p>Register your interest and our partnerships team will be in touch within one business day to discuss the opportunity in detail.</p>
             <div className="cta-buttons">
-              <Link to="/#contact" className="btn-primary">Register Interest</Link>
+              <Link to="/contact" className="btn-primary">Register Interest</Link>
               <Link to="/partnership-agreements" className="btn-outline">View Partnership Terms</Link>
             </div>
           </div>

@@ -13,6 +13,8 @@ const reactRoutes = new Set([
   "/partnerships",
   "/partnership-agreements",
   "/real-estate-agencies",
+  "/gallery",
+  "/contact",
 ]);
 
 function spaRouteFallback() {
