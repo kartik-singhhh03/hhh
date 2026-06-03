@@ -4,11 +4,12 @@
    ============================================================ */
 
 @media (max-width: 900px) {
-  /* Issue 1 — experience image on tablet */
+  /* Issue 1 — experience image: full image visible, no crop */
   .experience-image {
     aspect-ratio: auto;
-    height: 220px;
-    max-height: 220px;
+    height: auto;
+    max-height: none;
+    overflow: hidden;
     background: linear-gradient(
       135deg,
       rgba(144, 203, 220, 0.18),
@@ -17,10 +18,16 @@
   }
 
   .experience-image img {
-    object-fit: contain;
-    object-position: center;
-    height: 100%;
     width: 100%;
+    height: auto;
+    max-height: none;
+    object-fit: contain !important;
+    object-position: center;
+    display: block;
+  }
+
+  .experience-accent {
+    display: none;
   }
 
   /* Issue 3 — single-column reviews on tablet and mobile */
@@ -87,11 +94,16 @@
     font-size: clamp(1rem, 2vw, 1.05rem);
   }
 
-  /* Issue 1 — About HHH image (Experience section) — reinforce at 768 */
+  /* Issue 1 — reinforce no-crop on small phones */
   .experience-image {
     aspect-ratio: auto;
-    height: 220px;
-    max-height: 220px;
+    height: auto;
+    max-height: none;
+  }
+
+  .experience-image img {
+    height: auto;
+    object-fit: contain !important;
   }
 
   .experience-wrap {
