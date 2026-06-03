@@ -886,7 +886,13 @@ section { padding: 100px 0; }
 }
 .property-price-tag .price { font-family: var(--font-serif); font-size: 1.6rem; font-weight: 700; color: var(--text-dark); }
 .property-price-tag .per    { font-size: .72rem; color: var(--text-muted); }
-.property-info h2 { font-family: var(--font-serif); font-size: clamp(1.7rem, 2.5vw, 2.3rem); font-weight: 700; color: var(--text-dark); line-height: 1.25; margin-bottom: 12px; }
+.property-badge--mobile,
+.property-area-label,
+.property-residence-overlay,
+.property-title--mobile { display: none; }
+.property-title--desktop { display: block; }
+.property-info h2,
+.property-title--desktop { font-family: var(--font-serif); font-size: clamp(1.7rem, 2.5vw, 2.3rem); font-weight: 700; color: var(--text-dark); line-height: 1.25; margin-bottom: 12px; }
 .property-location { display: flex; align-items: center; gap: 7px; color: var(--primary-dark); font-family: var(--font-ui); font-size: .85rem; font-weight: 500; margin-bottom: 28px; }
 .property-location .material-symbols-outlined { font-size: 16px; }
 .property-specs {

@@ -2,6 +2,11 @@ import { useNavigate } from "react-router-dom";
 import { useProperties } from "../context/PropertiesProvider";
 import { getPropertyRoutePath } from "../lib/propertiesApi";
 
+function getMobileBadge(property) {
+  if (property.badgeDisplay) return property.badgeDisplay;
+  return property.badge?.replace(/·/g, "•").toUpperCase() ?? "";
+}
+
 function PropertyCard({ property }) {
   const navigate = useNavigate();
 
@@ -17,15 +22,30 @@ function PropertyCard({ property }) {
     navigate(getPropertyRoutePath(property));
   };
 
+  const mobileTitleLine1 =
+    property.displayTitleLine1 ||
+    property.title?.replace(/^HHH\s*[–-]\s*/i, "").replace(/\s*[–-]\s*Sea View\s*$/i, "") ||
+    property.title;
+  const mobileTitleLine2 = property.displayTitleLine2 || property.location;
+
   return (
     <div className="property-wrap">
       <div className="property-image-wrap reveal reveal-delay-1">
-        <img
-          src={property.image}
-          alt={property.title}
-          loading="lazy"
-        />
-        <span className="property-badge">{property.badge}</span>
+        <img src={property.image} alt={mobileTitleLine1} loading="lazy" />
+        {property.displayArea ? (
+          <span className="property-area-label">{property.displayArea}</span>
+        ) : null}
+        <span className="property-badge property-badge--desktop">
+          {property.badge}
+        </span>
+        <span className="property-badge property-badge--mobile">
+          {getMobileBadge(property)}
+        </span>
+        {property.displayResidence ? (
+          <span className="property-residence-overlay">
+            {property.displayResidence}
+          </span>
+        ) : null}
         <div className="property-price-tag">
           <div className="price">{property.price}</div>
           <div className="per">{property.priceLabel}</div>
@@ -33,8 +53,12 @@ function PropertyCard({ property }) {
       </div>
 
       <div className="property-info reveal reveal-delay-2">
-        <div className="section-label">Featured Property</div>
-        <h2>{property.title}</h2>
+        <div className="section-label property-info-label">Featured Property</div>
+        <h2 className="property-title property-title--desktop">{property.title}</h2>
+        <div className="property-title property-title--mobile" aria-label={property.title}>
+          <span className="property-title-main">{mobileTitleLine1}</span>
+          <span className="property-title-sub">{mobileTitleLine2}</span>
+        </div>
         <div className="property-location">
           <span className="material-symbols-outlined">place</span>
           {property.location}
