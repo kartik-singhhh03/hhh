@@ -4,25 +4,27 @@
    ============================================================ */
 
 @media (max-width: 900px) {
-  /* Issue 1 — experience image: full image visible, no crop */
-  .experience-image {
-    aspect-ratio: auto;
-    height: auto;
-    max-height: none;
-    overflow: hidden;
-    background: linear-gradient(
-      135deg,
-      rgba(144, 203, 220, 0.18),
-      rgba(244, 233, 215, 0.32)
-    );
+  /* Issue 1 — experience brand image: flexible container, no crop */
+  .experience-wrap {
+    align-items: start;
   }
 
-  .experience-image img {
+  .experience-section {
+    overflow: visible;
+  }
+
+  .experience-image {
     width: 100%;
     height: auto;
     max-height: none;
-    object-fit: contain !important;
-    object-position: center;
+    overflow: visible;
+  }
+
+  .experience-image img {
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    object-fit: unset !important;
     display: block;
   }
 
@@ -94,19 +96,18 @@
     font-size: clamp(1rem, 2vw, 1.05rem);
   }
 
-  /* Issue 1 — reinforce no-crop on small phones */
+  /* Issue 1 — reinforce flexible image on small phones */
   .experience-image {
-    aspect-ratio: auto;
-    height: auto;
-    max-height: none;
+    overflow: visible;
   }
 
   .experience-image img {
-    height: auto;
-    object-fit: contain !important;
+    height: auto !important;
+    max-height: none !important;
   }
 
   .experience-wrap {
+    align-items: start;
     gap: 32px;
   }
 
@@ -386,8 +387,12 @@
   /* Prevent horizontal scroll */
   .hhh-fw,
   .container,
-  main,
-  section {
+  main {
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  section:not(.experience-section) {
     overflow-x: clip;
     max-width: 100%;
   }

@@ -60,8 +60,15 @@ export default function Experience() {
       <div className="container">
         <div className="experience-wrap">
           <div className="experience-image reveal">
-            <img src="/hhh_image.jpeg" alt="Holiday Home Host logo on coastal water background" loading="lazy" />
-            <div className="experience-accent"></div>
+            <img
+              src="/hhh_image.jpeg"
+              alt="Holiday Home Host logo on coastal water background"
+              width={1024}
+              height={901}
+              loading="lazy"
+              decoding="async"
+            />
+            <div className="experience-accent" aria-hidden="true"></div>
           </div>
           <div className="experience-content reveal reveal-delay-2">
             <div className="section-label">About Holiday Home Host</div>
